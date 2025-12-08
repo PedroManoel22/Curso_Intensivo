@@ -54,11 +54,12 @@ class User:
         print(f'\n{self.login_attempts}')
 
 
-user1 = User()
-user1.describe_user()
-user1.greet_user()
-user1.increment_login_attemps()
-user1.increment_login_attemps()
-user1.increment_login_attemps()
-user1.reset_login_attemps()
-user1.increment_login_attemps()
+if __name__ == '__main__':
+    user1 = User()
+    user1.describe_user()
+    user1.greet_user()
+    user1.increment_login_attemps()
+    user1.increment_login_attemps()
+    user1.increment_login_attemps()
+    user1.reset_login_attemps()
+    user1.increment_login_attemps()
