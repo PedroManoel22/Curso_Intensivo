@@ -15,40 +15,44 @@
 # lista vazia no final de seu programa
 
 from rich import print
-pessoas = ['Raul Seixas', 'Renato Russo', 'Tim Maia']
+
+pessoas = ["Raul Seixas", "Renato Russo", "Tim Maia"]
 
 for p in pessoas:
-    print(f'\n{p}, Vou fazer um jantar delicioso e você está convidado!')
+    print(f"\n{p}, Vou fazer um jantar delicioso e você está convidado!")
 
 print()
-print('[green]Encontrei uma mesa com mais lugares![/]')
-pessoas.insert(0, 'Fernandinho')
+print("[green]Encontrei uma mesa com mais lugares![/]")
+pessoas.insert(0, "Fernandinho")
 meio = int(len(pessoas) / 2)
-pessoas.insert(meio, 'Claudio')
-pessoas.append('José')
+pessoas.insert(meio, "Claudio")
+pessoas.append("José")
 
 for p in pessoas:
-    print(f'\n{p}, Vou fazer um jantar delicioso e você está convidado!')
+    print(f"\n{p}, Vou fazer um jantar delicioso e você está convidado!")
 
 print()
-print('[red]Infelizmente não teremos mais nossa mesa, agora nossa mesa terá apenas 2 vagas[/]\n')
+print(
+    "[red]Infelizmente não teremos mais nossa mesa, agora nossa mesa terá apenas 2 vagas[/]\n"
+)
 
 # removendo e mandando mensagem de sentimentos para as pessoas removidas
 
 print(pessoas)
-pessoas_removidas = ['Fernandinho', 'Claudio', 'José', 'Tim Maia']
+pessoas_removidas = ["Fernandinho", "Claudio", "José", "Tim Maia"]
 for p in pessoas[:]:
     if p in pessoas_removidas:
         pessoas.pop(pessoas.index(p))
-        print(f'[purple]{p} me perdoe mas foi não está mais convidado para o jantar![/]\n')
+        print(
+            f"[purple]{p} me perdoe mas foi não está mais convidado para o jantar![/]\n"
+        )
 
 # convite para as duas pessoas restantes
 
 for p in pessoas:
-    print(f'Venho aqui lhe convidar Sr(a) {p} para meu jantar ás 19h\n')
+    print(f"Venho aqui lhe convidar Sr(a) {p} para meu jantar ás 19h\n")
 
 del pessoas[0]
 del pessoas[0]
 
 print(pessoas)
-
