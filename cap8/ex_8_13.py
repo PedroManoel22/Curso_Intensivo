@@ -16,3 +16,6 @@ user_profile = build_profile(
     "albert", "einstein", location="princeton", field="physics"
 )
 print(user_profile)
+
+me = build_profile("Pedro", "Miguel", location="Brazil", field="automation")
+print(me)
