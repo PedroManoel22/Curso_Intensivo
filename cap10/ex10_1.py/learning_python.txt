@@ -1,0 +1,4 @@
+Em Python podemos mostrar uma sáida pro usuário apenas com o comando: print()
+Em Python podemos mudar um tipo str para int, por exemplo: num_str = "80", num_int = int(num_str)
+Em Python podemos pedir para o usuário alguma entrada com o comando inpu(), por exemplo: input("Insira seu nome: ")
+Em Python podemos abrir um arquivo de texto e fechar quando necessário, com apenas uma linha de código:  with open("endereço_arquivo", encoding="utf-8"):
