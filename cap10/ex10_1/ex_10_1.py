@@ -7,17 +7,29 @@
 # percorrendo o objeto arquivo com um laço e outra armazenando as linhas em uma
 # lista e então trabalhando com ela fora do bloco with.
 
+adress = "Curso_Intensivo/cap10/ex10_1.py/learning_python.txt"
 
 # lendo o arquivo todo
-adress = "Curso_Intensivo/cap10/ex10_1.py/learning_python.txt"
-print()
+
+"""print()
 with open(adress, encoding="utf-8") as file_object:
     file = file_object.read()
     print(file)
 
 print()
-
+"""
 # percorrendo o objeto arquivo com um laço
 
+"""print()
+with open(adress, encoding="utf-8") as file_object:
+    for line in file_object:
+        print(line)
+print()"""
 
 # armazenando as linhas em uma lista e então trabalhando com ela fora do bloco with
+
+with open(adress, encoding="utf-8") as file_object:
+    lines = file_object.readlines()
+
+for line in lines:
+    print(line)
