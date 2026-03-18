@@ -8,17 +8,19 @@
 
 from ex_9_1 import Restaurant
 
+
 class IceCreamStand(Restaurant):
-    def __init__(self, restaurant_name, cuisine_type):
+    def __init__(self, restaurant_name: str, cuisine_type: str):
         super().__init__(restaurant_name, cuisine_type)
-        self.flavors = ['Strawberry', 'Lemon', 'Watermelon', 'Grape']
-    
+        self.flavors = ["Strawberry", "Lemon", "Watermelon", "Grape"]
+
     def show_flavors(self):
-        print('\n---- Flavors ----')
+        print("\n---- Flavors ----")
         for f in self.flavors:
             print(f)
         print()
 
-x = IceCreamStand('Pedro´S Ice cream', 'ice-cream parlor')
+
+x = IceCreamStand("Pedro´S Ice cream", "ice-cream parlor")
 x.describe_restaurant()
 x.show_flavors()

@@ -6,7 +6,7 @@
 
 
 class OderedDict:
-    def __init__(self, **glossary):
+    def __init__(self, **glossary: str):
         self.glossary = glossary
 
     def show_glossario(self):

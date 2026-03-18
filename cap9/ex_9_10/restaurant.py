@@ -2,7 +2,11 @@ class Restaurant:
     number_total = 0
 
     def __init__(
-        self, restaurant_name, cuisine_type, number_served=0, open=False
+        self,
+        restaurant_name: str,
+        cuisine_type: str,
+        number_served: int = 0,
+        open: bool = False,
     ):
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
@@ -11,25 +15,21 @@ class Restaurant:
         self.number_total += number_served
 
     @property
-    def number_served(self):
+    def number_served(self) -> int:
         return self._number_served
 
     @number_served.setter
-    def number_served(self, new):
+    def number_served(self, new: int) -> None:
         self._number_served = new
 
     def describe_restaurant(self):
-        print(
-            f"\nName: {self.restaurant_name}\n" f"type: {self.cuisine_type}\n"
-        )
+        print(f"\nName: {self.restaurant_name}\ntype: {self.cuisine_type}\n")
 
     def open_restaurant(self):
-        print(
-            f"\n\033[1;32mThe restaurant {self.restaurant_name} is open!\033[m"
-        )
+        print(f"\n\033[1;32mThe restaurant {self.restaurant_name} is open!\033[m")
         self.open = True
 
-    def set_number_served(self, new_number):
+    def set_number_served(self, new_number: int):
         if self.open:
             self._number_served = new_number
             print(f"Updated list of served clients: {self._number_served}")
@@ -46,7 +46,7 @@ class Restaurant:
 if __name__ == "__main__":
     restaurant = Restaurant("Pedro`s bar", "Comida nordestina", 15)
     restaurant.open_restaurant()
-    print(restaurant._number_served)
+    print(restaurant.number_served)
     restaurant.set_number_served(2)
-    print(restaurant._number_served)
+    print(restaurant.number_served)
     restaurant.increment_number_served()

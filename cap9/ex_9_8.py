@@ -5,21 +5,19 @@
 # instância de Admin e use seu método para exibir os privilégios.
 
 from ex_9_7 import Admin
+
+
 class Privileges(Admin):
-    def __init__(self, *args):
+    def __init__(self, *args: str):
         super().__init__()
         self.privileges_admin = self.privileges_admin
         self.privileges = args
         for a in self.privileges:
             self.privileges_admin.append(a)
-    
+
     def show_privileges(self):
         return super().show_privileges()
 
 
-new_privileges = Privileges('OI sou novo', 'ehhe', 'testando')
+new_privileges = Privileges("OI sou novo", "ehhe", "testando")
 new_privileges.show_privileges()
-
-
-    
-        

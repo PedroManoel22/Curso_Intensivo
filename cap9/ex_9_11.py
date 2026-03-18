@@ -5,7 +5,6 @@
 
 from modules import Admin
 
-
 adm = Admin()
 adm.describe_user()
 adm.show_privileges()

@@ -10,7 +10,7 @@
 class Car:
     """Uma tentativa simples de representar um carro."""
 
-    def __init__(self, make, model, year):
+    def __init__(self, make: str, model: str, year: int):
         self.make = make
         self.model = model
         self.year = year
@@ -23,13 +23,13 @@ class Car:
     def read_odometer(self):
         print("This car has " + str(self.odometer_reading) + " miles on it.")
 
-    def update_odometer(self, mileage):
+    def update_odometer(self, mileage: float):
         if mileage >= self.odometer_reading:
             self.odometer_reading = mileage
         else:
             print("You can't roll back an odometer!")
 
-    def increment_odometer(self, miles):
+    def increment_odometer(self, miles: float):
         self.odometer_reading += miles
 
 
@@ -37,7 +37,7 @@ class Battery:
     """Uma tentativa simples de modelar uma bateria para um carro
     elétrico."""
 
-    def __init__(self, battery_size=70):
+    def __init__(self, battery_size: float = 70):
         """Inicializa os atributos da bateria."""
         self.battery_size = battery_size
 
@@ -48,6 +48,8 @@ class Battery:
     def get_range(self):
         """Exibe uma frase sobre a distância que o carro é capaz de
         percorrer com essa bateria."""
+        range = 0
+
         if self.battery_size == 70:
             range = 240
         elif self.battery_size == 85:
@@ -57,7 +59,7 @@ class Battery:
         message += " miles on a full charge."
         print(message)
 
-    def upgrade_battery(self, value):
+    def upgrade_battery(self, value: float):
         if value != 70 and value != 85:
             self.battery_size = 85
 
@@ -65,7 +67,7 @@ class Battery:
 class ElectricCar(Car):
     """Representa aspectos específicos de veículos elétricos."""
 
-    def __init__(self, make, model, year):
+    def __init__(self, make: str, model: str, year: int):
         """Inicializa os atributos da classe-pai."""
         super().__init__(make, model, year)
         self.batetry = Battery()
@@ -74,7 +76,7 @@ class ElectricCar(Car):
     #     """Exibe uma frase que descreve a capacidade da bateria."""
     #     print("This car has a " + str(self.batetry_size) + "-Kwh batterry.")
 
-    def fill_gas_tank():
+    def fill_gas_tank(self):
         """Carros elétricos não têm tanques de gasolina."""
         print("This car doesn't need a gas tank!")
 

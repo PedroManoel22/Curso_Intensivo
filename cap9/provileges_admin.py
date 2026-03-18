@@ -18,7 +18,7 @@ class Admin(User):
 
 
 class Privileges(Admin):
-    def __init__(self, *args):
+    def __init__(self, *args: str):
         super().__init__()
         self.privileges_admin = self.privileges_admin
         self.privileges = args

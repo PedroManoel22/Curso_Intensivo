@@ -19,7 +19,7 @@ class Die:
             rool_die() -> Sorteia números inteiros entre 1 e o número de lados do dado
     """
 
-    def __init__(self, sides=6):
+    def __init__(self, sides: int = 6):
         self.sides = sides
 
     def roll_die(self):
