@@ -34,18 +34,14 @@ print()
 for user in new_users:
     while user in current_user:
         new = str(
-            input(
-                f'O usuário "{user}" já está em uso, por favor insira um novo: '
-            )
+            input(f'O usuário "{user}" já está em uso, por favor insira um novo: ')
         ).lower()
 
         if not new:
             print("\n[red]Por favor insira um nome de usuário![/]\n")
 
         if new in current_user:
-            print(
-                f'\nO usuário "{user}" já está em uso, por favor insira um novo: '
-            )
+            print(f'\nO usuário "{user}" já está em uso, por favor insira um novo: ')
 
         if new in new_users:
             while new in new_users:

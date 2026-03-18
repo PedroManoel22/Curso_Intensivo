@@ -5,15 +5,15 @@
 # • testes de igualdade e de não igualdade com strings;
 
 print("testes de igualdade e de não igualdade com strings;")
-cor = "Blue"
+cor: str = "Blue"
 print("\nColor == Blue?", cor == cor)
-print("\nColor == Black?", cor == "Black")
+print("\nColor == Black?", cor == "Black")  # type: ignore
 
 # • testes usando a função lower();
 
 print("testes usando a função lower();")
-string = "OI"
-print("\nString == oi?", string == "oi")
+string: str = "OI"
+print("\nString == oi?", string == "oi")  # type: ignore
 print("\nColor == OI?", string == string.lower())
 print()
 
@@ -23,10 +23,10 @@ print()
 print(
     "testes numéricos que envolvam igualdade e não igualdade, maior e menor que,maior ou igual a e menor ou igual a;"
 )
-x = 1
-y = 3
-print(x == y)
-print(x != y)
+x: int = 1
+y: int = 3
+print(x == y)  # type: ignore
+print(x != y)  # type: ignore
 print(x > y)
 print(x < y)
 print(x >= y)
@@ -36,9 +36,9 @@ print()
 # • testes usando as palavras reservadas and e or;
 
 print("testes usando as palavras reservadas and e or;")
-x = 1
-y = 3
-print(x == 1 and y == 2)
+x: int = 1
+y: int = 3
+print(x == 1 and y == 2)  # type: ignore
 print()
 
 # • testes para verificar se um item está em uma lista;

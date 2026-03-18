@@ -10,52 +10,37 @@
 # exibida para a cor apropriada do alienígena.
 
 # executa o if
-alien_color = "green"
+alien_color: str = "green"
 
 if alien_color == "green":
-    print(f"\nA cor do alienígena é verde!" "Parabéns você ganhou 5 pontos!\n")
+    print("\nA cor do alienígena é verde!Parabéns você ganhou 5 pontos!\n")
 
 elif alien_color == "yellow":
-    print(
-        f"\nA cor do alienígena é amarelo!" "Parabéns você ganhou 10 pontos!\n"
-    )
+    print("\nA cor do alienígena é amarelo!Parabéns você ganhou 10 pontos!\n")
 
 else:
-    print(
-        f"\nA cor do alienígena é vermelhor!"
-        "Parabéns você ganhou 15 pontos!\n"
-    )
+    print("\nA cor do alienígena é vermelhor!Parabéns você ganhou 15 pontos!\n")
 
 # executa o elif
 alien_color = "yellow"
 
-if alien_color == "green":
-    print(f"\nA cor do alienígena é verde!" "Parabéns você ganhou 5 pontos!\n")
+if alien_color == "green":  # type: ignore
+    print("\nA cor do alienígena é verde!Parabéns você ganhou 5 pontos!\n")
 
 elif alien_color == "yellow":
-    print(
-        f"\nA cor do alienígena é amarelo!" "Parabéns você ganhou 10 pontos!\n"
-    )
+    print("\nA cor do alienígena é amarelo!Parabéns você ganhou 10 pontos!\n")
 
 else:
-    print(
-        f"\nA cor do alienígena é vermelhor!"
-        "Parabéns você ganhou 15 pontos!\n"
-    )
+    print("\nA cor do alienígena é vermelhor!Parabéns você ganhou 15 pontos!\n")
 
 # executa o else
 alien_color = "red"
 
-if alien_color == "green":
-    print(f"\nA cor do alienígena é verde!" "Parabéns você ganhou 5 pontos!\n")
+if alien_color == "green":  # type: ignore
+    print("\nA cor do alienígena é verde!Parabéns você ganhou 5 pontos!\n")
 
-elif alien_color == "yellow":
-    print(
-        f"\nA cor do alienígena é amarelo!" "Parabéns você ganhou 10 pontos!\n"
-    )
+elif alien_color == "yellow":  # type: ignore
+    print("\nA cor do alienígena é amarelo!Parabéns você ganhou 10 pontos!\n")
 
 else:
-    print(
-        f"\nA cor do alienígena é vermelho!"
-        "Parabéns você ganhou 15 pontos!\n"
-    )
+    print("\nA cor do alienígena é vermelho!Parabéns você ganhou 15 pontos!\n")

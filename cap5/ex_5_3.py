@@ -7,12 +7,12 @@
 # • Escreva uma versão desse programa em que o teste if passe e outro em que ele
 # falhe. (A versão que falha não terá nenhuma saída.)
 
-alien_color = "green"
+alien_color: str = "green"
 
 if alien_color == "green":
-    print(f"\nA cor do alienígena é verde!" "Parabéns você ganhou 5 pontos!\n")
+    print("\nA cor do alienígena é verde!Parabéns você ganhou 5 pontos!\n")
 
 alien_color = "yellow"
 
-if alien_color == "green":
-    print(f"\nA cor do alienígena é verde!" "Parabéns você ganhou 5 pontos!")
+if alien_color == "green":  # type: ignore
+    print("\nA cor do alienígena é verde!Parabéns você ganhou 5 pontos!")
