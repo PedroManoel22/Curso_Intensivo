@@ -9,18 +9,20 @@
 # • Exiba um segundo conjunto de mensagens com o convite, uma para cada
 # pessoa que continua presente em sua lista.
 
-pessoas = ['Raul Seixas', 'Renato Russo', 'Tim Maia']
+pessoas = ["Raul Seixas", "Renato Russo", "Tim Maia"]
 
-cabecalho = f'Vou fazer um jantar delicioso e você está convidado!, confira seu nome na lista:\n'
+cabecalho = (
+    "Vou fazer um jantar delicioso e você está convidado!, confira seu nome na lista:\n"
+)
 
 print(cabecalho)
 for p in pessoas:
     print(p)
-    
+
 
 print()
-print(f'\033[1;31m{pessoas[1]} não poderá comparecer!\n\033[m')
-pessoas[1] = 'Joelma'
+print(f"\033[1;31m{pessoas[1]} não poderá comparecer!\n\033[m")
+pessoas[1] = "Joelma"
 
 print(cabecalho)
 
@@ -28,5 +30,3 @@ for p in pessoas:
     print(p)
 
 print()
-
-

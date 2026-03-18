@@ -20,36 +20,36 @@
 # 13. Reverter a ordem da lista.
 
 
-cores = ['azul', 'branco', 'vermelho', 'preto', 'cinza', 'marrom', 'amarelo', 'laranja']
+cores = ["azul", "branco", "vermelho", "preto", "cinza", "marrom", "amarelo", "laranja"]
 
 # 1.
-print(f'1. {cores[2]}')
+print(f"1. {cores[2]}")
 
 # 2.
-print(f'2. {cores[2].title()}')
+print(f"2. {cores[2].title()}")
 
 # 3.
-cores[2] = 'hehehe'
-print(f'3. {cores[2]}')
+cores[2] = "hehehe"
+print(f"3. {cores[2]}")
 
 # 4.
-cores.append('Adicionando ao final')
-print(f'4. {cores}')
+cores.append("Adicionando ao final")
+print(f"4. {cores}")
 
 # 5.
-cores.insert(3, 'Oi')
-print(f'5. {cores}')
+cores.insert(3, "Oi")
+print(f"5. {cores}")
 
 # 6.
 del cores[4]
-print(f'6. {cores}')
+print(f"6. {cores}")
 
 # 7.
 cores.pop()
-print(f'7. {cores}')
+print(f"7. {cores}")
 
 # 8.
-cores.remove('marrom')
+cores.remove("marrom")
 print(cores)
 
 # 9.
@@ -68,4 +68,3 @@ cores.sort(reverse=True)
 # 13.
 cores.reverse()
 print(cores)
-                                  

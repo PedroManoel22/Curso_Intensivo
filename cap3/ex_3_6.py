@@ -10,19 +10,19 @@
 # • Exiba um novo conjunto de mensagens de convite, uma para cada pessoa que
 # está em sua lista.
 
-pessoas = ['Raul Seixas', 'Renato Russo', 'Tim Maia']
+pessoas = ["Raul Seixas", "Renato Russo", "Tim Maia"]
 
 for p in pessoas:
-    print(f'\n{p}, Vou fazer um jantar delicioso e você está convidado!')
+    print(f"\n{p}, Vou fazer um jantar delicioso e você está convidado!")
 
 print()
-print('\033[1;32mEncontrei uma mesa com mais lugares!\033[m')
-pessoas.insert(0, 'Fernandinho')
+print("\033[1;32mEncontrei uma mesa com mais lugares!\033[m")
+pessoas.insert(0, "Fernandinho")
 meio = int(len(pessoas) / 2)
-pessoas.insert(meio, 'Claudio')
-pessoas.append('José')
+pessoas.insert(meio, "Claudio")
+pessoas.append("José")
 
 for p in pessoas:
-    print(f'\n{p}, Vou fazer um jantar delicioso e você está convidado!')
+    print(f"\n{p}, Vou fazer um jantar delicioso e você está convidado!")
 
 print()

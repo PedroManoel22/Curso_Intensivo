@@ -2,7 +2,7 @@
 # chamada names. Exiba o nome de cada pessoa acessando cada elemento da lista,
 # um de cada vez.
 
-names = ['Pedro', 'Ana', 'Fernando', 'Isaias', 'Fernandinha']
+names = ["Pedro", "Ana", "Fernando", "Isaias", "Fernandinha"]
 
 print()
 

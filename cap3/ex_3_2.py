@@ -3,9 +3,9 @@
 # texto de cada mensagem deve ser o mesmo, porém cada mensagem deve estar
 # personalizada com o nome da pessoa.
 
-names = ['Pedro', 'Ana', 'Fernando', 'Isaias', 'Fernandinha']
+names = ["Pedro", "Ana", "Fernando", "Isaias", "Fernandinha"]
 
 for name in names:
-    print(f'\nOlá {name}, tenha um bom dia! 🥰')
+    print(f"\nOlá {name}, tenha um bom dia! 🥰")
 
 print()

@@ -20,39 +20,41 @@
 # ordem alfabética inversa. Exiba a lista para mostrar que sua ordem mudou. ✔️
 from rich import print
 
-lugares = ['Canadá', 'Tailândia', 'Califórnia', 'Londres', 'Alaska' ]
+lugares = ["Canadá", "Tailândia", "Califórnia", "Londres", "Alaska"]
 
 # Mostrando a lista em ordem original
-print(f'\nLista em ordem original: {lugares}')
+print(f"\nLista em ordem original: {lugares}")
 
 # Mostrando a lista em ordem alfabética, se alterar a ordem original da lista
-print(f'Lista em ordem alfabética, sem alterar a lista original: {sorted(lugares)}')
+print(f"Lista em ordem alfabética, sem alterar a lista original: {sorted(lugares)}")
 
 # Mostrando que a lista não foi alterada
-print(f'Mostrando que a ordem da lista não foi alterada: {lugares}')
+print(f"Mostrando que a ordem da lista não foi alterada: {lugares}")
 
 # Mostrando a lista em ordem alfabética reversa, sem alterar a ordem original da lista
-print(f'Ordem alfabética reversa, sem alterar a lista original: {sorted(lugares, reverse=True)}')
+print(
+    f"Ordem alfabética reversa, sem alterar a lista original: {sorted(lugares, reverse=True)}"
+)
 
 # Mostrando que a lista não foi alterada
-print(f'Mostrando que a ordem da lista não foi alterada: {lugares}')
+print(f"Mostrando que a ordem da lista não foi alterada: {lugares}")
 
 # Utilizando o reverse, e mostrando que a ordem da lista foi alterada
 lugares.reverse()
-print(f'Ultilizando o reverse:')
-print(f'Mostrando que a ordem da lista foi alterada: {lugares}')
+print("Ultilizando o reverse:")
+print(f"Mostrando que a ordem da lista foi alterada: {lugares}")
 
 # Utilizando o reverse novamente, e mostrando que a ordem da lista voltou a ser a original
 lugares.reverse()
-print(f'Ultilizando o reverse novamente:')
-print(f'Mostrando que a ordem da lista voltou a ser a original: {lugares}')
+print("Ultilizando o reverse novamente:")
+print(f"Mostrando que a ordem da lista voltou a ser a original: {lugares}")
 
 # utilizando sort e mostrando que que sua ordem
 lugares.sort()
-print(f'Utilizando o sort:')
-print(f'Mostrando que a ordem foi alterada: {lugares}')
+print("Utilizando o sort:")
+print(f"Mostrando que a ordem foi alterada: {lugares}")
 
 # utilizando o sort com a opção de inversão
 lugares.sort(reverse=True)
-print(f'Utilizando o sort com a inversão:')
-print(f'Mostrando que a ordem da lista foi alterada: {lugares}')
+print("Utilizando o sort com a inversão:")
+print(f"Mostrando que a ordem da lista foi alterada: {lugares}")

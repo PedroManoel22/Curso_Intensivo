@@ -2,7 +2,6 @@
 # Exercícios de 3.4 a 3.7 (páginas 80 e 81), use len() para exibir uma mensagem
 # informando o número de pessoas que você está convidando para o jantar.
 
-from rich import print
 #  ex 3.4
 
 
@@ -24,7 +23,7 @@ from rich import print
 # print(cabecalho)
 # for p in pessoas:
 #     print(p)
-    
+
 
 # print()
 # print(f'[red]{pessoas[1]} não poderá comparecer!\n\033[/]')

@@ -3,9 +3,9 @@
 # lista para exibir uma série de frases sobre esses itens, como “Gostaria de ter uma
 # moto Honda”.
 
-transportes_favoritos = ['Jetta', 'Golf', 'Astra']
+transportes_favoritos = ["Jetta", "Golf", "Astra"]
 
 for t in transportes_favoritos:
-    print(f'\nGostaria de ter um {t}')
+    print(f"\nGostaria de ter um {t}")
 
 print()

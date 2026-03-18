@@ -5,11 +5,10 @@
 
 # peguei o programa do exercício 3.4
 
-pessoas = ['Raul Seixas', 'Renato Russo', 'Tim Maia']
+pessoas = ["Raul Seixas", "Renato Russo", "Tim Maia"]
 
 for p in pessoas:
-    print(f'\n{p}, Vou fazer um almoço delicioso e você está convidado!')
+    print(f"\n{p}, Vou fazer um almoço delicioso e você está convidado!")
 
 print()
-print(pessoas[3]) # grenaod o erro de índice, a lista "pessoas" tem índice 2
-
+print(pessoas[3])  # grenaod o erro de índice, a lista "pessoas" tem índice 2
