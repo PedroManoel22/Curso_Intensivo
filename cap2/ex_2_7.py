@@ -5,7 +5,7 @@
 # sejam mostrados. Em seguida, exiba o nome usando cada uma das três funções de
 # remoção de espaços: lstrip(), rstrip() e strip()
 
-name = '\t  Pedro   \n'
+name = "\t  Pedro   \n"
 print(name)
 print(name.lstrip())
 print(name.rstrip())

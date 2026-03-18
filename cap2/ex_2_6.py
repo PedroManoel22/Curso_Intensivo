@@ -3,6 +3,6 @@
 # componha sua mensagem e armazene-a em uma nova variável chamada message.
 # Exiba sua mensagem.
 
-famous_person = 'Oppenheimer'
-phrase = 'Agora eu me tornei a morte, o destruidor de mundos!'
-print(f'\n{famous_person} um vez disse: {phrase}\n')
+famous_person = "Oppenheimer"
+phrase = "Agora eu me tornei a morte, o destruidor de mundos!"
+print(f"\n{famous_person} um vez disse: {phrase}\n")

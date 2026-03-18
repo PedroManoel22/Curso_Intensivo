@@ -4,6 +4,6 @@
 # Albert Einstein certa vez disse: “Uma pessoa que nunca cometeu um erro jamais
 # tentou nada novo.”
 
-frase = 'Agora eu me tornei a morte, o destruidor de mundos!'
+frase = "Agora eu me tornei a morte, o destruidor de mundos!"
 
 print(f'\nOppenheimer certa vez disse: "{frase}"\n')

@@ -2,7 +2,7 @@
 # seguida, exiba essa mensagem. Então altere o valor de sua variável para uma
 # nova mensagem e mostre essa nova mensagem.
 
-msg = 'oi'
+msg = "oi"
 print(msg)
-msg = 'mudei a mensagem'
+msg = "mudei a mensagem"
 print(msg)

@@ -4,4 +4,4 @@
 
 
 favorite_number = 46
-print(f'\nMy favorite number is {favorite_number}\n')
+print(f"\nMy favorite number is {favorite_number}\n")
