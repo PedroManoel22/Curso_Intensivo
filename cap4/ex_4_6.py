@@ -3,6 +3,6 @@
 # números.
 
 num_impares = [x for x in range(1, 21, 2)]
-print('\nNúmeros Ímpares de 1 a 20:')
+print("\nNúmeros Ímpares de 1 a 20:")
 for num in num_impares:
     print(num)

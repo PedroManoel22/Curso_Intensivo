@@ -9,18 +9,18 @@
 
 multiplos_tres = [x for x in range(3, 31, 3)]
 
-print('\nOs três primeiros itens da lista são: ', end='')
+print("\nOs três primeiros itens da lista são: ", end="")
 
 # Exibindo os três primeiros elementos (números) da lista
 for n in multiplos_tres[:3]:
-    print(f'{n} ', end='')
+    print(f"{n} ", end="")
 
-print('\n')
+print("\n")
 
-print('Os três últimos itens da lista são: ', end='')
+print("Os três últimos itens da lista são: ", end="")
 
 # Exibindo os três últimos elementos (números) da lista
 for n in multiplos_tres[-3:]:
-    print(f'{n} ', end='')
+    print(f"{n} ", end="")
 
-print('\n')
+print("\n")

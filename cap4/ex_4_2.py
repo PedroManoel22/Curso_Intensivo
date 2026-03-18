@@ -7,9 +7,9 @@
 # têm em comum. Você poderia exibir uma frase como Qualquer um desses
 # animais seria um ótimo animal de estimação!
 
-animais = ['Onça', 'Tigre', 'Leão', 'Raposa']
+animais = ["Onça", "Tigre", "Leão", "Raposa"]
 print()
 for animal in animais:
-    print(f'Um(a) {animal} seria um ótimo animal de estimação!')
+    print(f"Um(a) {animal} seria um ótimo animal de estimação!")
 
-print('\nQualquer um desses animais seria um ótimo animal de estimação!\n')
+print("\nQualquer um desses animais seria um ótimo animal de estimação!\n")

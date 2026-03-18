@@ -11,9 +11,9 @@
 # Eu realmente adoro pizza!
 
 
-pizzas = ['Portuguesa', 'Calabresa', 'Frango', 'Frango com catupiry']
+pizzas = ["Portuguesa", "Calabresa", "Frango", "Frango com catupiry"]
 print()
 for pizza in pizzas:
-    print(f' Eu gosto de pizza de {pizza}!')
+    print(f" Eu gosto de pizza de {pizza}!")
 
-print('\nEu realmente amo pizza!\n')
+print("\nEu realmente amo pizza!\n")

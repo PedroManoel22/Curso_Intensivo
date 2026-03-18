@@ -2,6 +2,6 @@
 # exibir os números de sua lista.
 
 multiplos_tres = [x for x in range(3, 31, 3)]
-print('\nMúltiplos de Três de 3 a 30:')
+print("\nMúltiplos de Três de 3 a 30:")
 for multiplo in multiplos_tres:
     print(multiplo)

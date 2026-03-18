@@ -9,18 +9,18 @@
 # for para exibir a segunda lista. Certifique-se de que cada pizza nova esteja
 # armazenada na lista apropriada.
 
-my_pizzas = ['Portuguesa', 'Calabresa', 'Frango', 'Frango com catupiry']
+my_pizzas = ["Portuguesa", "Calabresa", "Frango", "Frango com catupiry"]
 friend_pizzas = my_pizzas[:]
 
-my_pizzas.append('Queijo do reino')
-friend_pizzas.append('4 queijos')
+my_pizzas.append("Queijo do reino")
+friend_pizzas.append("4 queijos")
 
 # Exibindo a lista das minhas pizzas favoritas
-my_pizzas_str = ', '.join(my_pizzas)
-print(f'\nMinhas pizzas favoritas são: {my_pizzas_str}')
+my_pizzas_str = ", ".join(my_pizzas)
+print(f"\nMinhas pizzas favoritas são: {my_pizzas_str}")
 
 # Exibindo a lista das pizzas favoritas do meu amigo
 friend_pizzas_str = ", ".join(friend_pizzas)
-print(f'As pizzas favoritas do meu amigo são: {friend_pizzas_str}')
+print(f"As pizzas favoritas do meu amigo são: {friend_pizzas_str}")
 
-print('\n')
+print("\n")

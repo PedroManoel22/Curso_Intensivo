@@ -5,8 +5,8 @@
 # • O restaurante muda seu cardápio, substituindo dois dos itens com pratos
 # diferentes. Acrescente um bloco de código que reescreva a tupla e, em seguida,
 # use um laço for para exibir cada um dos itens do cardápio revisado.
-from rich.panel import Panel
 from rich import print
+from rich.panel import Panel
 
 buffet = (
     "Macarrão simples",
