@@ -9,8 +9,8 @@
 # armazenadas corretamente.
 
 
-def make_car(name: str, model: str, **others: str) -> str:
-    informations = dict()
+def make_car(name: str, model: str, **others: str | bool) -> dict[str, str | bool]:
+    informations: dict[str, str | bool] = dict()
     informations["name"] = name
     informations["model"] = model
 

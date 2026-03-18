@@ -5,7 +5,7 @@
 # em que pelo menos uma delas não esteja no país default.
 
 
-def describe_city(city, country="Não informado"):
+def describe_city(city: str, country: str = "Não informado"):
     print(f"\n{city.title()} está localizada no(a) {country}\n")
 
 

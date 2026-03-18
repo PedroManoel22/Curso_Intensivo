@@ -5,7 +5,7 @@
 from rich import print
 
 
-def make_shirt(tamanho="gg", msg="Eu amo Python"):
+def make_shirt(tamanho: str = "gg", msg: str = "Eu amo Python"):
     tamanhos = ["pp", "p", "m", "g", "gg"]
     tam = tamanho.lower()
 
@@ -19,7 +19,6 @@ def make_shirt(tamanho="gg", msg="Eu amo Python"):
 
 
 if __name__ == "__main__":
-
     tamanho1 = "gg"
     make_shirt(tamanho1)
 

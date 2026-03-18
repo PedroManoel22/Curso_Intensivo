@@ -3,7 +3,7 @@
 # a função e certifique-se de que a mensagem seja exibida corretamente.
 
 
-def display_message(msg):
+def display_message(msg: str) -> None:
     print(f"\n{msg}\n")
 
 

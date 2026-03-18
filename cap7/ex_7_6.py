@@ -15,16 +15,10 @@ while True:
         break
 
     elif idade < 3 and idade > 0:
-        print(
-            f"\nComo a pessoa tem {idade} anos, o ingresso é [green]gratuito[/]!"
-        )
+        print(f"\nComo a pessoa tem {idade} anos, o ingresso é [green]gratuito[/]!")
 
     elif idade >= 3 and idade <= 12:
-        print(
-            f"\nComo a pessoa tem {idade} anos, o ingresso é [green]US$10[/]!"
-        )
+        print(f"\nComo a pessoa tem {idade} anos, o ingresso é [green]US$10[/]!")
 
     else:
-        print(
-            f"\n como a pessoa tem {idade} anos, o ingresso é [green]US$15[/]!"
-        )
+        print(f"\n como a pessoa tem {idade} anos, o ingresso é [green]US$15[/]!")

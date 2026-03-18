@@ -5,15 +5,16 @@
 # valor de saída no laço while
 
 import re
+
 from rich import print
 
 
-def make_album(name, title, tracks=0) -> dict:
-    album = dict()
+def make_album(name: str, title: str, tracks: int = 0) -> dict[str, str]:
+    album: dict[str, str] = dict()
     album["name"] = name
     album["title"] = title
     if tracks > 0:
-        album["tracks"] = tracks
+        album["tracks"] = str(tracks)
     return album
 
 
@@ -26,7 +27,7 @@ def is_valid_name(name: str) -> bool:
     2. Deve conter apenas letras e espaços (incluindo acentos).
     3. Deve ter pelo menos um sobrenome (opcional, dependendo da regra de negócio).
     """
-    if not name or not isinstance(name, str):
+    if not name:
         return False
 
     # Limpa espaços extras no início, fim e entre palavras (strip + join/split)
@@ -50,7 +51,7 @@ def is_valid_title(name: str) -> bool:
     1. Não pode ser vazio.
     2. Deve conter apenas letras e espaços (incluindo acentos).
     """
-    if not name or not isinstance(name, str):
+    if not name:
         return False
 
     else:
@@ -58,12 +59,9 @@ def is_valid_title(name: str) -> bool:
 
 
 if __name__ == "__main__":
-
     while True:
         name = str(input("\nInsira o nome e sobrenome do artista: "))
-        title = str(
-            input(f"\nInsira o nome do albúm do(a) contor(a) {name}: ")
-        )
+        title = str(input(f"\nInsira o nome do albúm do(a) contor(a) {name}: "))
         ret_name = is_valid_name(name)
         ret_title = is_valid_title(title)
 

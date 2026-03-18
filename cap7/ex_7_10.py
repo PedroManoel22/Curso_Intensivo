@@ -3,7 +3,7 @@
 # visitar um lugar do mundo, para onde você iria? Inclua um bloco de código que
 # apresente os resultados da enquete.
 
-dados = []
+dados: list[dict[str, str]] = []
 
 while True:
     pessoa = {

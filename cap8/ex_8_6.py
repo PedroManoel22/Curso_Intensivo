@@ -6,7 +6,7 @@
 # devolvido.
 
 
-def city_country(city, country):
+def city_country(city: str, country: str):
     print(f"{city}, {country}")
 
 

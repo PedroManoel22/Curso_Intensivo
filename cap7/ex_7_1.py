@@ -9,8 +9,6 @@ while True:
     if car and all(c.isalpha() for c in car):
         break
 
-    print(
-        "\n⚠️[red]  Por favor, digite um nome de carro válido (apenas letras).[/]"
-    )
+    print("\n⚠️[red]  Por favor, digite um nome de carro válido (apenas letras).[/]")
 
 print(f"\nDeixe me ver se consigo um {car} para você!\n")

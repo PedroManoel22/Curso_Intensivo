@@ -10,17 +10,17 @@
 # menos uma nova chamada da função incluindo o número de faixas em um álbum.
 
 
-def make_album(name, title, tracks=0) -> dict:
-    album = dict()
+def make_album(name: str, title: str, tracks: int = 0) -> dict[str, str]:
+    album: dict[str, str] = dict()
     album["name"] = name
     album["title"] = title
     if tracks > 0:
-        album["tracks"] = tracks
+        album["tracks"] = str(tracks)
     return album
 
 
 if __name__ == "__main__":
-    album1 = make_album("João", "1")
+    album1: dict[str, str] = make_album("João", "1")
     album2 = make_album("Fernando", "Luar")
     album3 = make_album("RT", "Um dois")
     album4 = make_album("RT", "Um dois", 5)

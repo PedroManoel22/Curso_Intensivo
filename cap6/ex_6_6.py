@@ -25,8 +25,6 @@ for p in people_participate:
         print(f"[green1]Obrigado {p} por participar da enquete![/]\n")
 
     else:
-        print(
-            f"[yellow]{p}, você tem interesse em participar da nossa enquete?[/]\n"
-        )
+        print(f"[yellow]{p}, você tem interesse em participar da nossa enquete?[/]\n")
 
 print()

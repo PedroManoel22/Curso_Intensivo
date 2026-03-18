@@ -4,7 +4,7 @@
 # se esqueça de incluir o título do livro como argumento na chamada da função.
 
 
-def favorite_book(name):
+def favorite_book(name: str):
     print(f"\nUm dos meus livro favoritos é {name.title()}\n")
 
 

@@ -6,7 +6,7 @@
 # Garanta que nenhum sanduíche de pastrami acabe em finished_sandwiches.
 from rich import print
 
-sandwich_orders = [
+sandwich_orders: list[str] = [
     "HAMBURGÃO",
     "pastrami",
     "humburguinho",
@@ -16,7 +16,7 @@ sandwich_orders = [
     "pastrami",
 ]
 
-finished_sandwiches = []
+finished_sandwiches: list[str] = []
 
 print()
 print(f"Sanduíches a sereem feitos: {sandwich_orders}\n")
@@ -29,7 +29,7 @@ for san in sandwich_orders:
 sandwich_orders.clear()
 
 print()
-print(f"Sanduíches preparados: ")
+print("Sanduíches preparados: ")
 for san in finished_sandwiches:
     print(san)
 print()

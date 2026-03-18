@@ -1,4 +1,4 @@
-def print_models(unprinted_designs, completed_models):
+def print_models(unprinted_designs: list[str], completed_models: list[str]):
     """
     Simula a impressão de cada design, até que não haja mais nenhum.
     Transfere cada design para completed_models após a impressão.
@@ -11,15 +11,15 @@ def print_models(unprinted_designs, completed_models):
         completed_models.append(current_design)
 
 
-def show_completed_models(completed_models):
+def show_completed_models(completed_models: list[str]):
     """Mostra todos os modelos impressos."""
     print("\nThe following models have been printed:")
     for completed_model in completed_models:
         print(completed_model)
 
 
-unprinted_designs = ["iphone case", "robot pendant", "dodecahedron"]
-completed_models = []
+unprinted_designs: list[str] = ["iphone case", "robot pendant", "dodecahedron"]
+completed_models: list[str] = []
 
 if __name__ == "__main__":
     print_models(unprinted_designs, completed_models)

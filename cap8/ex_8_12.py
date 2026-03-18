@@ -6,23 +6,23 @@
 from rich import print
 
 
-def sanduiche(ham=list[str], itens=int) -> str:
+def sanduiche(ham: list[str] = [], itens: int = 0) -> str:
 
     igredientes = ", ".join(ham)
-    return (
-        f"\nO sanduiche tem {itens} igredientes, são eles:\n"
-        f"[yellow]{igredientes}[/]\n"
-    )
+    if ham:
+        return f"\nO sanduiche tem {itens} igredientes, são eles:\n[yellow]{igredientes}[/]\n"
+
+    return "\n[red]O sanduiche Não tem ingredientes[/]\n"
 
 
 if __name__ == "__main__":
-    igredientes = [
+    igredientes: list[str] = [
         "Alface",
         "2 carnes de 100g",
         "Tomate",
         "Molho especial da casa",
         "pepino",
     ]
-    total_igredientes = len(igredientes)
+    total_igredientes: int = len(igredientes)
     sanduiche1 = sanduiche(igredientes, total_igredientes)
     print(sanduiche1)

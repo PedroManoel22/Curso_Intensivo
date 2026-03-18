@@ -7,7 +7,7 @@
 # mensagem que liste cada sanduíche preparado.
 
 sandwich_orders = ["HAMBURGÃO", "humburguinho", "bancozito", "BACOOON"]
-finished_sandwiches = []
+finished_sandwiches: list[str] = []
 
 print()
 for san in sandwich_orders:
@@ -17,7 +17,7 @@ for san in sandwich_orders:
 sandwich_orders.clear()
 
 print()
-print(f"Sanduíches preparados: ")
+print("Sanduíches preparados: ")
 for san in finished_sandwiches:
     print(san)
 print()

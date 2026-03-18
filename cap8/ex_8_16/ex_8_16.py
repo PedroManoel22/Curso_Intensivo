@@ -9,10 +9,10 @@
 # from nome_do_módulo import *
 
 import ex_8_2_copia  # 1
+import ex_8_2_copia as nm  # 4
+from ex_8_2_copia import *
 from ex_8_2_copia import favorite_book  # 2
 from ex_8_2_copia import favorite_book as nf  # 3
-import ex_8_2_copia as nm  # 4
-from ex_8_2_copia import *  # 5
 
 # 1
 my_favorite_book = "IT"

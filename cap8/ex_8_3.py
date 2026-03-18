@@ -8,7 +8,7 @@
 from rich import print
 
 
-def make_shirt(tamanho: str, msg: str):
+def make_shirt(tamanho: str, msg: str) -> None:
     tamanhos = ["pp", "p", "m", "g", "gg"]
     tam = tamanho.lower()
 

@@ -5,13 +5,13 @@
 from rich import print
 
 
-def valida_num_int(pergunta):
+def valida_num_int(pergunta: str):
     while True:
         try:
             qtd_pessoas = int(input(pergunta))
 
         except (ValueError, KeyboardInterrupt):
-            print(f"\n[red]Por favor coloque um número inteiro![/]")
+            print("\n[red]Por favor coloque um número inteiro![/]")
 
         else:
             return qtd_pessoas
