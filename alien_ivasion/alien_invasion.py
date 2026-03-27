@@ -2,6 +2,7 @@ import sys
 
 import pygame
 from settings import Settings
+from ship import Ship
 
 
 def run_game():
@@ -12,6 +13,9 @@ def run_game():
         (ai_settings.screen_widht, ai_settings.screen_height)
     )  # Janela inteira do jogo
     pygame.display.set_caption("Alien Invasion")
+
+    # Cria uma espaçonave
+    ship = Ship(screen)
 
     # Define a cor de fundo
 
@@ -34,6 +38,7 @@ def run_game():
 
         # Redesenha a tela a cada passagem pelo laço
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
         # Deixa a tela mais recente visível
         pygame.display.flip()
 
