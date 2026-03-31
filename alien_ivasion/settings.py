@@ -16,3 +16,6 @@ class Settings:
         # bg_color = (255, 0, 0)  # Vermelho
         # bg_color = (0, 255, 0)  # Verde
         # bg_color = (0, 0, 255)  # Azul
+
+        # Configurações da espaçonave
+        self.ship_speed_factor = 1.5
