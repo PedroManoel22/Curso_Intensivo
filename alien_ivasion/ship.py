@@ -10,6 +10,13 @@ class Ship:
         self.image = pygame.image.load(
             "Curso_Intensivo/alien_ivasion/images/ship.bmp"
         )  # Carregando a imagem
+
+        # mudar tamanho da imagem
+        novo_tamanho = (50, 50)
+
+        # pygame.transform.scale recebe a superfície original e o novo tamanho
+        self.image = pygame.transform.scale(self.image, novo_tamanho)
+
         self.rect = self.image.get_rect()  # Pegando o rect da imagem
         self.screen_rect = screen.get_rect()  # Pegando o rect da tela
 
