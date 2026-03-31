@@ -1,13 +1,13 @@
 import sys
 
 import pygame
-
-# Tipagem
 from settings import Settings
 from ship import Ship
 
+# Tipagem
 
-def check_events() -> None:
+
+def check_events(ship: Ship) -> None:
     """Responde a ecentos de pressionamento de teclas e mouse"""
     # Observa eventos de teclado e mouse
     for event in pygame.event.get():
@@ -15,6 +15,22 @@ def check_events() -> None:
         if event.type == pygame.QUIT:
             # quando o evento for == ao usuário cliclar no botão de fechamento
             sys.exit()
+
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_RIGHT:
+                # Move a espaçonave para a direita
+                ship.moving_right = True
+
+            elif event.key == pygame.K_LEFT:
+                # Move a espaçonave para a esquerda
+                ship.moving_left = True
+
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_RIGHT:
+                ship.moving_right = False
+
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = False
 
 
 def update_screen(ai_settings: Settings, screen: pygame.Surface, ship: Ship) -> None:
