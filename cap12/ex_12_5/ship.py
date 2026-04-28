@@ -13,6 +13,9 @@ class Ship:
             "Curso_Intensivo/alien_ivasion/images/ship.bmp"
         )  # Carregando a imagem
 
+        # Rotaciona a imagem original
+        self.image = pygame.transform.rotate(self.image, -90)
+
         # Definindo um novo tamanho para a imagem
         novo_tamanho = (50, 50)
 
@@ -22,16 +25,20 @@ class Ship:
         self.rect = self.image.get_rect()  # Pegando o rect da imagem
         self.screen_rect = screen.get_rect()  # Pegando o rect da tela
 
-        # Inicia cada nova espaçonave na parte inferior central da tela
-        self.rect.centerx = self.screen_rect.centerx
-        self.rect.bottom = self.screen_rect.bottom
+        # Posiciona o lado esquerdo da nave no lado esquerdo da tela
+        self.rect.left = self.screen_rect.left
+        # Centraliza a nave verticalmente
+        self.rect.centery = self.screen_rect.centery
 
         # Armazena um valor decimal para o centro da espaçonave
         self.center = float(self.rect.centerx)
+        self.y = float(self.rect.centery)
 
         # Flag de movimento
         self.moving_right = False
         self.moving_left = False
+        self.moving_up = False
+        self.moving_down = False
 
     def update(self):
         """Atualiza a posição da espaçonave de acordo com as flags de movimento"""
@@ -44,8 +51,15 @@ class Ship:
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
 
+        if self.moving_up and self.rect.top > 0:
+            self.y -= self.ai_settings.ship_speed_factor
+
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.ai_settings.ship_speed_factor
+
         # Atualiza o objeto rect de acordo com self.center
         self.rect.centerx = int(self.center)
+        self.rect.centery = int(self.y)
 
     def blitme(self):
         """Desenha a espaçonave em sua posição atual."""
