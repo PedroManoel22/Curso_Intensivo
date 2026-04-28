@@ -28,10 +28,13 @@ class Ship:
 
         # Armazena um valor decimal para o centro da espaçonave
         self.center = float(self.rect.centerx)
+        self.y = float(self.rect.centery)
 
         # Flag de movimento
         self.moving_right = False
         self.moving_left = False
+        self.moving_up = False
+        self.moving_down = False
 
     def update(self):
         """Atualiza a posição da espaçonave de acordo com as flags de movimento"""
@@ -44,8 +47,15 @@ class Ship:
         if self.moving_left and self.rect.left > 0:
             self.center -= self.ai_settings.ship_speed_factor
 
+        if self.moving_up and self.rect.top > 0:
+            self.y -= self.ai_settings.ship_speed_factor
+
+        if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
+            self.y += self.ai_settings.ship_speed_factor
+
         # Atualiza o objeto rect de acordo com self.center
         self.rect.centerx = int(self.center)
+        self.rect.centery = int(self.y)
 
     def blitme(self):
         """Desenha a espaçonave em sua posição atual."""
