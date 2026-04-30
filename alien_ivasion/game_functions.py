@@ -4,6 +4,7 @@ import sys
 from typing import Any
 
 import pygame
+from alien import Alien
 from bullet import Bullet
 from pygame.sprite import Group
 from settings import Settings
@@ -78,7 +79,11 @@ def check_events(
 
 
 def update_screen(
-    ai_settings: Settings, screen: pygame.Surface, ship: Ship, bullets: "Group[Any]"
+    ai_settings: Settings,
+    screen: pygame.Surface,
+    ship: Ship,
+    alien: Alien,
+    bullets: "Group[Any]",
 ) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
     # Redesenha a tela a cada passagem pelo laço
@@ -88,6 +93,7 @@ def update_screen(
         bullet.draw_bullet()
 
     ship.blitme()
+    alien.blitme()
 
     # Deixa a tela mais recente visível
     pygame.display.flip()
