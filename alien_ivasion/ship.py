@@ -10,7 +10,7 @@ class Ship:
 
         # Carega a imagem da espaçonave e obtém seu rect
         self.image = pygame.image.load(
-            "Curso_Intensivo/alien_ivasion/images/teste.bmp"
+            "Curso_Intensivo/alien_ivasion/images/ship.bmp"
         )  # Carregando a imagem
 
         # Definindo um novo tamanho para a imagem
