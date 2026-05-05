@@ -82,7 +82,7 @@ def update_screen(
     ai_settings: Settings,
     screen: pygame.Surface,
     ship: Ship,
-    alien: Alien,
+    aliens: Group[Any],
     bullets: "Group[Any]",
 ) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
@@ -93,7 +93,7 @@ def update_screen(
         bullet.draw_bullet()
 
     ship.blitme()
-    alien.blitme()
+    aliens.draw(screen)
 
     # Deixa a tela mais recente visível
     pygame.display.flip()
@@ -120,3 +120,48 @@ def fire_bullet(
     if len(bullets) < ai_settings.bullets_allowed:
         new_bullet = Bullet(ai_settings, screen, ship)
         bullets.add(new_bullet)
+
+
+def get_number_aliens_x(ai_settings: Settings, alien_width: int) -> int:
+    available_space_x = ai_settings.screen_widht - 2 * alien_width
+    number_aliens_x = int(available_space_x / (2 * alien_width))
+    return number_aliens_x
+
+
+def get_number_rows(ai_settings: Settings, ship_height: int, alien: Alien) -> int:
+    """determina o númeor de linhas com alienígenas que cabem na tela."""
+    alien_height = alien.rect.height
+    available_space_y = ai_settings.screen_height - (3 * alien_height) - ship_height
+    number_rows = available_space_y // (2 * alien_height)
+    return number_rows
+
+
+def create_alien(
+    ai_settings: Settings,
+    screen: pygame.Surface,
+    aliens: Group[Any],
+    alien_number: int,
+    row_number: int,
+):
+    # Cria um alienígena e o posiciona na linha
+    alien = Alien(ai_settings, screen)
+    alien_width = alien.rect.width
+    alien.x = alien_width + 2 * alien_width * alien_number
+    alien.rect.x = alien.x
+    alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
+    aliens.add(alien)
+
+
+def create_fleet(
+    ai_settings: Settings, screen: pygame.Surface, ship: Ship, aliens: Group[Any]
+):
+    """Cria uma frota completa de alienígenas."""
+    # Cria um alienígena e calcula o número de alienígenas em uma linha
+    alien = Alien(ai_settings, screen)
+    number_aliens_x = get_number_aliens_x(ai_settings, alien.rect.width)
+    number_rows = get_number_rows(ai_settings, ship.rect.height, alien)
+
+    # Cria a frota de alienígenas
+    for row_number in range(number_rows):
+        for alien_number in range(number_aliens_x):
+            create_alien(ai_settings, screen, aliens, alien_number, row_number)
