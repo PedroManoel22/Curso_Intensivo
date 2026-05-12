@@ -31,4 +31,6 @@ def converter_png_para_bmp(caminho_entrada: str | Path) -> None:
 
 # Exemplo de uso
 if __name__ == "__main__":
-    converter_png_para_bmp("Curso_Intensivo/png_para_bmp/gota.png")
+    converter_png_para_bmp(
+        "Curso_Intensivo/png_para_bmp/Gemini_Generated_Image_va5j38va5j38va5j.png"
+    )
