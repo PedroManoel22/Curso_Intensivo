@@ -14,7 +14,7 @@ class Stars(Sprite):
 
         # Carrega a imagem da estrela e define seu atributo rect
         self.image = pygame.image.load("Curso_Intensivo/cap13/ex13_1/image/stars.bmp")
-        self.image = pygame.transform.scale(self.image, (30, 30))
+        self.image = pygame.transform.scale(self.image, (50, 50))
         self.rect = self.image.get_rect()
 
         # Inicia cada nova estrela próximo à parte superior esquerda da tela
