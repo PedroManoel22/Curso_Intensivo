@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from random import randint
 from typing import Any
 
 import pygame
@@ -31,12 +32,23 @@ def create_star(
     star_number: int,
     row_number: int,
 ):
-    """Cria uma estrela e a posiciona na grelha."""
+    """Cria uma estrela com um posicionamento levemente aleatório."""
     star = Stars(ai_settings, screen)
     star_width = star.rect.width
-    star.x = star_width + 2 * star_width * star_number
-    star.rect.x = star.x
-    star.rect.y = star.rect.height + 2 * star.rect.height * row_number
+    star_height = star.rect.height
+
+    # Cálculo da posição base (grelha fixa)
+    base_x = star_width + 2 * star_width * star_number
+    base_y = star_height + 2 * star_height * row_number
+
+    # Adicionando a aleatoriedade sugerida no exercício
+    random_offset_x = randint(-10, 10)
+    random_offset_y = randint(-10, 10)
+
+    # Aplica a posição final com o deslocamento
+    star.rect.x = base_x + random_offset_x
+    star.rect.y = base_y + random_offset_y
+
     stars.add(star)
 
 
