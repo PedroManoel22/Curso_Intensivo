@@ -68,7 +68,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 5.12 - Estilizando Instruções if
 - [x] 5.13 - Suas Ideias
 
-# Capítulo 6 - Dicionários
+#### Capítulo 6 - Dicionários
 - [x] 6.1 - Pessoa
 - [x] 6.2 - Números Favoritos
 - [x] 6.3 - Glossário
@@ -80,3 +80,95 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 6.9 - Lugares Favoritos
 - [x] 6.10 - Números Favoritos
 - [x] 6.11 - Cidades
+
+#### Capítulo 7 - Entrada de Usuário e Laços While
+- [x] 7.1 - Locação de Automóveis
+- [x] 7.2 - Lugares Em Um Restaurante
+- [x] 7.3 - Múltiplos de Dez
+- [x] 7.4 - Ingredientes Para Uma Pizza
+- [x] 7.5 - Ingressos Para o Cinema
+- [x] 7.6 - Trẽs Saídas
+- [x] 7.7 - Infinito
+- [x] 7.8 - Lanchonete
+- [x] 7.9 - Sem Pastrami
+- [x] 7.10 - Férias Dos Sonhos
+
+#### Capítulo 8 - Funções
+- [x] 8.1 - Mensagem
+- [x] 8.2 - Livro Favorito
+- [x] 8.3 - Camiseta
+- [x] 8.4 - Camisetas Grandes
+- [x] 8.5 - Cidades
+- [x] 8.6 - Nomes de Cidade
+- [x] 8.7 - Álbum
+- [x] 8.8 - Álbuns Dos Usuários
+- [x] 8.9 - Mágicos
+- [x] 8.10 - Grandes Mágicos
+- [x] 8.11 - Mágicos Inalterados
+- [x] 8.12 - Sanduíches
+- [x] 8.13 - Perfil Do Usuário
+- [x] 8.14 - Carros
+- [x] 8.15 - Impressão de Modelos
+- [x] 8.16 - Importações
+
+#### Capítulo 9 - Classes
+- [x] 9.1 - Restaurante
+- [x] 9.2 - Três Restaurantes
+- [x] 9.3 - Usuários
+- [x] 9.4 - Pessoas Atendidas
+- [x] 9.5 - Tentativas de Login
+- [x] 9.6 - Sorveteria
+- [x] 9.7 - Admin
+- [x] 9.8 - Privilégios
+- [x] 9.9 - Upgrade de Bateria
+- [x] 9.10 - Importando Restaurant
+- [x] 9.11 - Importando Admin
+- [x] 9.12 - Vários Módulos
+- [x] 9.13 - Reescrevendo o Programa com OrderedDict
+- [x] 9.14 - Dados
+- [x] 9.15 - Módulo Python da Semana
+
+#### Capítulo 10 - Arquivos e Exceções
+- [x] 10.1 - Aprendendo Python
+- [x] 10.2 - Aprendendo C
+- [x] 10.3 - Convidado
+- [x] 10.4 - Lista de Convidados
+- [x] 10.5 - Enquete Sobre Programação
+- [x] 10.6 - Adição
+- [x] 10.7 - Calculadora Para Adição
+- [x] 10.8 - Gatos e Cachorros
+- [x] 10.9 - Gatos e Cachorros Silenciosos
+- [x] 10.10 - Palavras Comuns
+- [x] 10.11 - Número Favorito
+- [x] 10.12 - Lembrando o Número Favorito
+- [x] 10.13 - Verificando Se é o Usuário Correto
+
+#### Capítulo 11 - Testando o Seu Código
+- [x] 11.1 - Cidade, país
+- [x] 11.2 - População
+- [x] 11.3 - Funcionário
+
+---
+## 🚀 Projetos em Desenvolvimento (Portfolio Building)
+
+Esta seção compreende os projetos práticos do livro, desenvolvidos com o objetivo de consolidar conceitos de arquitetura de software, manipulação de dados e desenvolvimento web seguindo as melhores práticas Pythonicas (`PEP 8`).
+
+### 👾 1. Invasão Alien (Desenvolvimento de Jogos com Pygame)
+* **Status:** `Em Desenvolvimento` 🚧
+* **Progresso:** ██████▒▒▒▒ (63%)
+* **Foco Técnico:** Programação Orientada a Objetos (POO), gerenciamento de eventos, refatoração de classes e controle de loops de jogos com `pygame`.
+
+### 📊 2. Visualização de Dados (Data Science & Analytics)
+* **Status:** `Planejado / Próximos Passos` 📅
+* **Progresso:** ░░░░░░░░░░ (0%)
+* **Foco Técnico:** Manipulação de dados com `matplotlib` e `requests`, consumo de APIs públicas (GitHub/Hacker News) e geração de gráficos interativos.
+
+### 🌐 3. Aplicação Web (Desenvolvimento Web com Django)
+* **Status:** `Planejado / Próximos Passos` 📅
+* **Progresso:** ░░░░░░░░░░ (0%)
+* **Foco Técnico:** Padrão MVT (Model-View-Template), persistência em bancos de dados, sistemas de autenticação de usuários e deploy em produção.
+
+
+
+       
+
