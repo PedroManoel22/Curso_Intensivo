@@ -39,5 +39,5 @@ class Drops(Sprite):
 
     def update(self):
         """Move o alienígena para a direita ou para a esquerda."""
-        self.x += self.ai_settings.alien_speed_factor * self.ai_settings.fleet_direction
+        self.x += self.ai_settings.drop_speed_factor * self.ai_settings.fleet_direction
         self.rect.x = int(self.x)

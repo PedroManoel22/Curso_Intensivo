@@ -18,7 +18,7 @@ class Settings:
         # bg_color = (0, 0, 255)  # Azul
 
         # Configuração das gotas
-        self.alien_speed_factor = 6
+        self.drop_speed_factor = 6
         self.fleet_drop_speed = 10
 
         # fleet_direction igual a 1 representa a direita; -1 representa
