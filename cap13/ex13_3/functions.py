@@ -9,7 +9,7 @@ from settings import Settings
 
 
 def get_number_drops_x(ai_settings: Settings, drop_width: int) -> int:
-    """Determina o número de estrelas que cabem em uma linha."""
+    """Determina o número de gotas que cabem em uma linha."""
     # Corrigido o erro de digitação 'widht' para 'width'
     available_space_x = ai_settings.screen_width - 2 * drop_width
     number_drops_x = available_space_x // (2 * drop_width)
@@ -17,8 +17,8 @@ def get_number_drops_x(ai_settings: Settings, drop_width: int) -> int:
 
 
 def get_number_rows(ai_settings: Settings, drop_height: int) -> int:
-    """Determina o número de linhas de estrelas que cabem na tela."""
-    # Removida a dependência da 'ship_height' já que o foco são as estrelas
+    """Determina o número de linhas de gotas que cabem na tela."""
+    # Removida a dependência da 'ship_height' já que o foco são as gotas
     available_space_y = ai_settings.screen_height - (3 * drop_height)
     number_rows = available_space_y // (2 * drop_height)
     return number_rows
@@ -31,7 +31,7 @@ def create_star(
     drop_number: int,
     row_number: int,
 ):
-    """Cria uma estrela e a posiciona na grelha."""
+    """Cria uma gota e a posiciona na grelha."""
     drop = Drops(ai_settings, screen)
     drop_width = drop.rect.width
     drop.x = drop_width + 2 * drop_width * drop_number
@@ -41,8 +41,8 @@ def create_star(
 
 
 def create_fleet(ai_settings: Settings, screen: pygame.Surface, drops: Group[Any]):
-    """Cria uma frota completa de estrelas."""
-    # Criamos uma estrela temporária apenas para medir as dimensões
+    """Cria uma chuva."""
+    # Criamos uma gota temporária apenas para medir as dimensões
     drop = Drops(ai_settings, screen)
     number_drops_x = get_number_drops_x(ai_settings, drop.rect.width)
     number_rows = get_number_rows(ai_settings, drop.rect.height)
@@ -57,3 +57,30 @@ def update_screen(ai_settings: Settings, screen: pygame.Surface, drops: "Group[A
     screen.fill(ai_settings.bg_color)
     drops.draw(screen)
     pygame.display.flip()
+
+
+def check_fleet_edges(ai_settings: Settings, drops: Group[Any]):
+    """Responde apropriadamente se alguma gota alcançou uma borda."""
+
+    for drop in drops.sprites():
+        if drop.check_edges():
+            change_fleet_direction(ai_settings, drops)
+            break
+
+
+def change_fleet_direction(ai_settings: Settings, drops: Group[Any]):
+    """Faz toda a frota descer e muda a sua direção."""
+    for drop in drops.sprites():
+        drop.rect.y += ai_settings.fleet_drop_speed
+
+    ai_settings.fleet_direction *= -1
+
+
+def update_drops(ai_settings: Settings, drops: Group[Any]):
+    """
+    Verifica se a chuva está em uma das bordas
+    e então atualiza as posições de todas as gotas da chuva.
+    """
+
+    check_fleet_edges(ai_settings, drops)
+    drops.update()
