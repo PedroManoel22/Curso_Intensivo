@@ -18,7 +18,7 @@ class Settings:
         # bg_color = (0, 0, 255)  # Azul
 
         # Configurações da espaçonave
-        self.ship_speed_factor = 1.5
+        self.ship_speed_factor = 1
 
         # configurações dos projéteis
         self.bullet_speed_factor = 1

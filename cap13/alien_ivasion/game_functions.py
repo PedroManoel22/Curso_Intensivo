@@ -99,7 +99,7 @@ def update_screen(
     pygame.display.flip()
 
 
-def update_bullets(bullets: Group[Any]):
+def update_bullets(aliens: Group[Any], bullets: Group[Any]):
     """Atualiza a posição dos projéteis e se livra dos projéteis antigos"""
 
     # Atualiza as posições dos projéteis
@@ -109,6 +109,9 @@ def update_bullets(bullets: Group[Any]):
     for bullet in bullets.copy():
         if bullet.rect.bottom <= 0:
             bullets.remove(bullet)
+
+    # Verifica se algum projétil atingiu os alienígenas
+    collisions = pygame.sprite.groupcollide(bullets, aliens, True, True)
 
 
 def fire_bullet(
