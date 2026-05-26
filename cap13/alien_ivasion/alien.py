@@ -1,7 +1,6 @@
 import pygame
 from pygame.sprite import Sprite
-
-from Curso_Intensivo.cap13.alien_ivasion.settings import Settings
+from settings import Settings
 
 
 class Alien(Sprite):
@@ -14,7 +13,9 @@ class Alien(Sprite):
         self.ai_settings = ai_settings
 
         # Carrega a imagem do alienígena e define seu atributo rect
-        self.image = pygame.image.load("Curso_Intensivo/alien_ivasion/images/alien.bmp")
+        self.image = pygame.image.load(
+            "Curso_Intensivo/cap13/alien_ivasion/images/alien.bmp"
+        )
         self.image = pygame.transform.scale(self.image, (30, 30))
         self.rect = self.image.get_rect()
 

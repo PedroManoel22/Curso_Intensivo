@@ -1,11 +1,10 @@
 from typing import Any
 
+import game_functions as gf
 import pygame
 from pygame.sprite import Group
-
-import Curso_Intensivo.cap13.alien_ivasion.game_functions as gf
-from Curso_Intensivo.cap13.alien_ivasion.settings import Settings
-from Curso_Intensivo.cap13.alien_ivasion.ship import Ship
+from settings import Settings
+from ship import Ship
 
 
 def run_game():
