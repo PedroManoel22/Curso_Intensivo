@@ -6,7 +6,7 @@ import sys
 from typing import Any
 
 import pygame
-from functions import create_fleet, update_screen
+from functions import create_fleet, update_drops, update_screen
 from pygame.sprite import Group
 from settings import Settings
 
@@ -37,6 +37,7 @@ def run_game(title: str = "Gotas de Chuva"):
                 pygame.quit()
                 sys.exit()
         update_screen(ai_settings, screen, stars)
+        update_drops(ai_settings, stars)
 
         clock.tick(30)  # limita para 30 fps
 
