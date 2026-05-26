@@ -1,8 +1,9 @@
 import pygame
 from pygame import Surface
 from pygame.sprite import Sprite
-from settings import Settings
-from ship import Ship
+
+from Curso_Intensivo.cap13.alien_ivasion.settings import Settings
+from Curso_Intensivo.cap13.alien_ivasion.ship import Ship
 
 
 class Bullet(Sprite):

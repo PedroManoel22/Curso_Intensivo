@@ -11,7 +11,7 @@ from pygame.sprite import Group
 from settings import Settings
 
 
-def run_game(title: str = "Estrelas"):
+def run_game(title: str = "Gotas de Chuva"):
     # Inicializa o jogo e cria um objeto para a tela
     pygame.init()
 

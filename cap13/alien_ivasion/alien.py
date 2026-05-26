@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
-from settings import Settings
+
+from Curso_Intensivo.cap13.alien_ivasion.settings import Settings
 
 
 class Alien(Sprite):

@@ -1,5 +1,6 @@
 import pygame
-from settings import Settings
+
+from Curso_Intensivo.cap13.alien_ivasion.settings import Settings
 
 
 class Ship:
