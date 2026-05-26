@@ -1,3 +1,5 @@
+import os
+
 import pygame
 from pygame.sprite import Sprite
 from settings import Settings
@@ -12,8 +14,12 @@ class Drops(Sprite):
         self.screen = screen
         self.ai_settings = ai_settings
 
+        diretorio_atual = os.path.dirname(__file__)
+
+        caminho_imagem = os.path.join(diretorio_atual, "image", "gota2.bmp")
+
         # Carrega a imagem da gota e define seu atributo rect
-        self.image = pygame.image.load("Curso_Intensivo/cap13/ex13_3/image/gota2.bmp")
+        self.image = pygame.image.load(caminho_imagem)
         self.image = pygame.transform.scale(self.image, (30, 30))
         self.rect = self.image.get_rect()
 

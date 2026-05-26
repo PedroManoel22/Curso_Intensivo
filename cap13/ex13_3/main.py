@@ -15,7 +15,7 @@ def run_game(title: str = "Gotas de Chuva"):
     # Inicializa o jogo e cria um objeto para a tela
     pygame.init()
 
-    stars: Group[Any] = Group()
+    drops: Group[Any] = Group()
 
     ai_settings = Settings()
 
@@ -24,7 +24,7 @@ def run_game(title: str = "Gotas de Chuva"):
     )
 
     # Cria a frota de estrelas
-    create_fleet(ai_settings, screen, stars)
+    create_fleet(ai_settings, screen, drops)
     # Janela inteira do jogo
     pygame.display.set_caption(title)
 
@@ -36,8 +36,8 @@ def run_game(title: str = "Gotas de Chuva"):
             if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-        update_screen(ai_settings, screen, stars)
-        update_drops(ai_settings, stars)
+        update_screen(ai_settings, screen, drops)
+        update_drops(ai_settings, drops)
 
         clock.tick(30)  # limita para 30 fps
 

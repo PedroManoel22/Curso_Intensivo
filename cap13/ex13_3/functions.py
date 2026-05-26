@@ -52,7 +52,9 @@ def create_fleet(ai_settings: Settings, screen: pygame.Surface, drops: Group[Any
             create_star(ai_settings, screen, drops, drop_number, row_number)
 
 
-def update_screen(ai_settings: Settings, screen: pygame.Surface, drops: "Group[Any]"):
+def update_screen(
+    ai_settings: Settings, screen: pygame.Surface, drops: "Group[Any]"
+) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
     screen.fill(ai_settings.bg_color)
     drops.draw(screen)
