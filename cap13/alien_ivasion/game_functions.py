@@ -1,4 +1,4 @@
-from __future__ import annotations  # DEVE SER A LINHA 1
+from __future__ import annotations
 
 import sys
 from typing import Any
