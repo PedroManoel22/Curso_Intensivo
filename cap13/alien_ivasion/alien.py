@@ -16,7 +16,7 @@ class Alien(Sprite):
         self.image = pygame.image.load(
             "Curso_Intensivo/cap13/alien_ivasion/images/alien.bmp"
         )
-        self.image = pygame.transform.scale(self.image, (50, 50))
+        self.image = pygame.transform.scale(self.image, (40, 40))
         self.rect = self.image.get_rect()
 
         # Inicia cada novo alienígena próximo à parte superiro esquerda da tela
