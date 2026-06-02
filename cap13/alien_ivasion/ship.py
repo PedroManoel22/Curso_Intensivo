@@ -4,6 +4,7 @@ from settings import Settings
 
 class Ship:
     def __init__(self, ai_settings: Settings, screen: pygame.Surface) -> None:
+        super().__init__()
         """Inicializa a espaçonave e define sua posição inicial."""
         self.screen = screen
         self.ai_settings = ai_settings
@@ -60,3 +61,7 @@ class Ship:
     def blitme(self):
         """Desenha a espaçonave em sua posição atual."""
         self.screen.blit(self.image, self.rect)
+
+    def center_ship(self):
+        """Centraliza a espaçonave na tela."""
+        self.center = self.screen_rect.centerx
