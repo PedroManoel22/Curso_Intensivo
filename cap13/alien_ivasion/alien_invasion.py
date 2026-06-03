@@ -2,6 +2,7 @@ from typing import Any
 
 import game_functions as gf
 import pygame
+from button import Button
 from game_stats import GameStats
 from pygame.sprite import Group
 from settings import Settings
@@ -23,6 +24,8 @@ def run_game():
 
     # Cria uma espaçonave
     ship = Ship(ai_settings, screen)
+    # Cria o botão Play
+    play_button = Button(ai_settings, screen, "Play")
 
     # # Cria um alienígena
     # alien = Alien(ai_settings, screen)
@@ -42,7 +45,7 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
-            gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+            gf.update_screen(ai_settings, screen, ship, aliens, bullets, play_button)
 
 
 run_game()

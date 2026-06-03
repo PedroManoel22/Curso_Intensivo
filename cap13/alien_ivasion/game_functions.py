@@ -7,6 +7,7 @@ from typing import Any
 import pygame
 from alien import Alien
 from bullet import Bullet
+from button import Button
 from game_stats import GameStats
 from pygame.sprite import Group
 from settings import Settings
@@ -86,9 +87,15 @@ def update_screen(
     ship: Ship,
     aliens: Group[Any],
     bullets: "Group[Any]",
+    play_button: Button,
 ) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
+    # Desenha o botão Play se o jogo estiver inativo
+
+    if not stats.game_active:
+        play_button.draw_button()
     # Redesenha a tela a cada passagem pelo laço
+
     screen.fill(ai_settings.bg_color)
 
     for bullet in bullets.sprites():
@@ -157,7 +164,7 @@ def get_number_aliens_x(ai_settings: Settings, alien_width: int) -> int:
 
 
 def get_number_rows(ai_settings: Settings, ship_height: int, alien: Alien) -> int:
-    """determina o númeor de linhas com alienígenas que cabem na tela."""
+    """determina o númeoro de linhas com alienígenas que cabem na tela."""
     alien_height = alien.rect.height
     available_space_y = ai_settings.screen_height - (3 * alien_height) - ship_height
     number_rows = available_space_y // (2 * alien_height)
