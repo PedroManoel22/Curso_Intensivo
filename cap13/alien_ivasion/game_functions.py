@@ -63,7 +63,13 @@ def check_keyup_events(event: pygame.event.Event, ship: Ship):
 
 
 def check_events(
-    ai_settings: Settings, screen: pygame.Surface, ship: Ship, bullets: Group[Any]
+    ai_settings: Settings,
+    screen: pygame.Surface,
+    stats: GameStats,
+    play_button: Button,
+    ship: Ship,
+    aliens: Group[Any],
+    bullets: Group[Any],
 ) -> None:
     """Responde a eventos de pressionamento de teclas e mouse"""
 
@@ -74,11 +80,52 @@ def check_events(
             # quando o evento for == ao usuário cliclar no botão de fechamento
             sys.exit()
 
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_x, mouse_y = pygame.mouse.get_pos()
+            check_play_button(
+                ai_settings,
+                screen,
+                stats,
+                play_button,
+                ship,
+                aliens,
+                bullets,
+                mouse_x,
+                mouse_y,
+            )
+
         elif event.type == pygame.KEYDOWN:
             check_keydown_events(event, ai_settings, screen, ship, bullets)
 
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
+
+
+def check_play_button(
+    ai_settings: Settings,
+    screen: pygame.Surface,
+    stats: GameStats,
+    play_button: Button,
+    ship: Ship,
+    aliens: Group[Any],
+    bullets: Group[Any],
+    mouse_x: int,
+    mouse_y: int,
+):
+    """Inicia um novo jogo quando o jogador clicar em PLay."""
+
+    botao_clicado = play_button.rect.collidepoint(mouse_x, mouse_y)
+    if botao_clicado and not stats.game_active:
+        stats.reset_stats()
+        stats.game_active = True
+
+        # Esvazia a lista de alienígenas e de projéteis
+        aliens.empty()
+        bullets.empty()
+
+        # Cria uma nova frota e centraliza a espaçonave
+        create_fleet(ai_settings, screen, ship, aliens)
+        ship.center_ship()
 
 
 def update_screen(
