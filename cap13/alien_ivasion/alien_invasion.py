@@ -24,6 +24,7 @@ def run_game():
 
     # Cria uma espaçonave
     ship = Ship(ai_settings, screen)
+
     # Cria o botão Play
     play_button = Button(ai_settings, screen, "Play")
 
@@ -45,7 +46,7 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
-            gf.update_screen(ai_settings, screen, ship, aliens, bullets, play_button)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets, stats, play_button)
 
 
 run_game()
