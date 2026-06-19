@@ -87,13 +87,11 @@ def update_screen(
     ship: Ship,
     aliens: Group[Any],
     bullets: "Group[Any]",
+    stats: GameStats,
     play_button: Button,
 ) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
-    # Desenha o botão Play se o jogo estiver inativo
 
-    if not stats.game_active:
-        play_button.draw_button()
     # Redesenha a tela a cada passagem pelo laço
 
     screen.fill(ai_settings.bg_color)
@@ -103,6 +101,10 @@ def update_screen(
 
     ship.blitme()
     aliens.draw(screen)
+
+    # Desenha o botão Play se o jogo estiver inativo
+    if not stats.game_active:
+        play_button.draw_button()
 
     # Deixa a tela mais recente visível
     pygame.display.flip()
