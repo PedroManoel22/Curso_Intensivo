@@ -28,7 +28,7 @@ class Settings:
         self.bullets_allowed = 3
 
         # Configuração dos alienígenas
-        self.fleet_drop_speed = 10
+        self.fleet_drop_speed = 8
 
         # A taxa com que a velocidade do jogo aumenta
         self.speedup_scale = 1.1

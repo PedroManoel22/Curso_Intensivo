@@ -5,14 +5,13 @@ from time import sleep
 from typing import Any
 
 import pygame
+from alien import Alien
+from bullet import Bullet
+from button import Button
+from game_stats import GameStats
 from pygame.sprite import Group
-
-from Curso_Intensivo.alien_ivasion.alien import Alien
-from Curso_Intensivo.alien_ivasion.bullet import Bullet
-from Curso_Intensivo.alien_ivasion.button import Button
-from Curso_Intensivo.alien_ivasion.game_stats import GameStats
-from Curso_Intensivo.alien_ivasion.settings import Settings
-from Curso_Intensivo.alien_ivasion.ship import Ship
+from settings import Settings
+from ship import Ship
 
 # Tipagem
 

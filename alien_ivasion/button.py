@@ -1,6 +1,5 @@
 import pygame
-
-from Curso_Intensivo.alien_ivasion.settings import Settings
+from settings import Settings
 
 
 class Button:

@@ -1,6 +1,5 @@
 import pygame
-
-from Curso_Intensivo.alien_ivasion.settings import Settings
+from settings import Settings
 
 
 class Ship:
@@ -12,7 +11,7 @@ class Ship:
 
         # Carega a imagem da espaçonave e obtém seu rect
         self.image = pygame.image.load(
-            "alien_ivasion/images/ship.bmp"
+            "Curso_Intensivo/alien_ivasion/images/ship.bmp"
         )  # Carregando a imagem
 
         # Definindo um novo tamanho para a imagem
