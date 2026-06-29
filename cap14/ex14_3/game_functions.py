@@ -120,6 +120,8 @@ def check_play_button(
     mouse_y: int,
 ) -> None:
     if play_button.rect.collidepoint(mouse_x, mouse_y):
+        # Reinicia as configurações do jogo
+        settings.initialize_dynamic_settings()
         start_game(settings, screen, stats, ship, bullets, target)
 
 
@@ -155,6 +157,8 @@ def update_bullets(
 
     # Colisão projétil × alvo (remove projétil e 'reseta' o alvo de leve)
     for bullet in pygame.sprite.spritecollide(target_as_sprite(target), bullets, True):  # type:ignore
+        settings.increse_speed()
+
         # Para simplificar, apenas inverte a direção ao ser atingido
         target.direction *= -1
 
