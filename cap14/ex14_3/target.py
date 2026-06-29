@@ -23,7 +23,10 @@ class Target:
 
     def update(self) -> None:
         """Move-se para cima e para baixo a velocidade constante; rebate nas bordas."""
-        self.y += self.settings.target_speed * self.direction
+        # ALTERADO: Mudamos target_speed para alien_speed_factor
+        self.y += self.settings.alien_speed_factor * self.direction
+        self.rect.y = int(self.y)
+
         # Rebate nas bordas superior/inferior
         if self.y <= 0:
             self.y = 0.0
