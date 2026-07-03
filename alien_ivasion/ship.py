@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pygame
 from settings import Settings
 
@@ -8,11 +10,11 @@ class Ship:
         """Inicializa a espaçonave e define sua posição inicial."""
         self.screen = screen
         self.ai_settings = ai_settings
+        BASE_DIR = Path(__file__).parent
+        image_path = BASE_DIR / "images" / "ship.bmp"
 
         # Carega a imagem da espaçonave e obtém seu rect
-        self.image = pygame.image.load(
-            "Curso_Intensivo/alien_ivasion/images/ship.bmp"
-        )  # Carregando a imagem
+        self.image = pygame.image.load(str(image_path))  # Carregando a imagem
 
         # Definindo um novo tamanho para a imagem
         novo_tamanho = (50, 50)
