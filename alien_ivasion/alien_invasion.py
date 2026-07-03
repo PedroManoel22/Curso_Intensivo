@@ -5,6 +5,7 @@ import pygame
 from button import Button
 from game_stats import GameStats
 from pygame.sprite import Group
+from scoreboard import Scoreboard
 from settings import Settings
 from ship import Ship
 
@@ -19,8 +20,9 @@ def run_game():
     # Janela inteira do jogo
     pygame.display.set_caption("Alien Invasion")
 
-    # Cria uma instância para armazenar dados estatísticos do jogo
+    # Cria uma instância para armazenar dados estatísticos do jogo e cria painel de pontuação
     stats = GameStats(ai_settings)
+    sb = Scoreboard(ai_settings, screen, stats)
 
     # Cria uma espaçonave
     ship = Ship(ai_settings, screen)
@@ -46,7 +48,9 @@ def run_game():
             ship.update()
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets)
             gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
-        gf.update_screen(ai_settings, screen, ship, aliens, bullets, stats, play_button)
+        gf.update_screen(
+            ai_settings, screen, ship, aliens, bullets, stats, sb, play_button
+        )
 
 
 run_game()
