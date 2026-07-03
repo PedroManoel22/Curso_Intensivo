@@ -10,6 +10,7 @@ from bullet import Bullet
 from button import Button
 from game_stats import GameStats
 from pygame.sprite import Group
+from scoreboard import Scoreboard
 from settings import Settings
 from ship import Ship
 
@@ -142,6 +143,7 @@ def update_screen(
     aliens: Group[Any],
     bullets: "Group[Any]",
     stats: GameStats,
+    sb: Scoreboard,
     play_button: Button,
 ) -> None:
     """Atualiza as imagens na tela e alterna para a nova tela."""
@@ -155,6 +157,9 @@ def update_screen(
 
     ship.blitme()
     aliens.draw(screen)
+
+    # Desenha a informação sobre pontuação
+    sb.show_score()
 
     # Desenha o botão Play se o jogo estiver inativo
     if not stats.game_active:
