@@ -45,6 +45,9 @@ class Settings:
         # fleet_direction igual a 1 representa a direita; -1 representa a esquerda.
         self.fleet_direction = 1
 
+        # Pontuação
+        self.alien_points = 50
+
     def increse_speed(self) -> None:
         """Aumenta as configurações de velocidade e o valor dos pontos."""
 
