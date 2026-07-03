@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pygame
 from pygame.sprite import Sprite
 from settings import Settings
@@ -11,9 +13,11 @@ class Alien(Sprite):
         super(Alien, self).__init__()
         self.screen = screen
         self.ai_settings = ai_settings
+        BASE_DIR = Path(__file__).parent
+        image_path = BASE_DIR / "images" / "alien.bmp"
 
         # Carrega a imagem do alienígena e define seu atributo rect
-        self.image = pygame.image.load("Curso_Intensivo/alien_ivasion/images/alien.bmp")
+        self.image = pygame.image.load(str(image_path))
         self.image = pygame.transform.scale(self.image, (60, 60))
         self.rect = self.image.get_rect()
 
