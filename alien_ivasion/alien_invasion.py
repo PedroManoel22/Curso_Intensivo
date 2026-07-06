@@ -13,6 +13,7 @@ from ship import Ship
 def run_game():
     # Inicializa o jogo e cria um objeto para a tela
     pygame.init()
+    pygame.font.init()
     ai_settings = Settings()
     screen = pygame.display.set_mode(
         (ai_settings.screen_widht, ai_settings.screen_height)
@@ -49,7 +50,7 @@ def run_game():
         if stats.game_active:
             ship.update()
             gf.update_bullets(ai_settings, screen, ship, aliens, bullets, stats, sb)
-            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets)
+            gf.update_aliens(ai_settings, stats, screen, ship, aliens, bullets, sb)
         gf.update_screen(
             ai_settings, screen, ship, aliens, bullets, stats, sb, play_button
         )
