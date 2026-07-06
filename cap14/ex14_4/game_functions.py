@@ -22,6 +22,7 @@ def check_keydown_events(
     screen: pygame.Surface,
     ship: Ship,
     bullets: Group[Any],
+    stats: GameStats,
 ) -> None:
     """Responde a pressionamento de tecla."""
 
@@ -43,6 +44,7 @@ def check_keydown_events(
         fire_bullet(ai_settings, screen, ship, bullets)
 
     elif event.key == pygame.K_q:
+        save_high_score(stats)
         sys.exit()
 
 
@@ -78,6 +80,7 @@ def check_events(
     for event in pygame.event.get():
         # pygame.event.get() -> acessar todos os eventos detectados
         if event.type == pygame.QUIT:
+            save_high_score(stats)
             # quando o evento for == ao usuário cliclar no botão de fechamento
             sys.exit()
 
@@ -97,7 +100,7 @@ def check_events(
             )
 
         elif event.type == pygame.KEYDOWN:
-            check_keydown_events(event, ai_settings, screen, ship, bullets)
+            check_keydown_events(event, ai_settings, screen, ship, bullets, stats)
 
         elif event.type == pygame.KEYUP:
             check_keyup_events(event, ship)
@@ -381,3 +384,9 @@ def check_high_score(stats: GameStats, sb: Scoreboard):
     if stats.score > stats.high_score:
         stats.high_score = stats.score
         sb.prep_high_score()
+
+
+def save_high_score(stats: GameStats):
+    """Grava a pontuação máxima em um arquivo de texto."""
+    with open("high_score.txt", "w") as file:
+        file.write(str(stats.high_score))
