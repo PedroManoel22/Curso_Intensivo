@@ -71,6 +71,7 @@ def check_events(
     ship: Ship,
     aliens: Group[Any],
     bullets: Group[Any],
+    sb: Scoreboard,
 ) -> None:
     """Responde a eventos de pressionamento de teclas e mouse"""
 
@@ -93,6 +94,7 @@ def check_events(
                 bullets,
                 mouse_x,
                 mouse_y,
+                sb,
             )
 
         elif event.type == pygame.KEYDOWN:
@@ -112,6 +114,7 @@ def check_play_button(
     bullets: Group[Any],
     mouse_x: int,
     mouse_y: int,
+    sb: Scoreboard,
 ):
     """Inicia um novo jogo quando o jogador clicar em PLay."""
 
@@ -126,6 +129,11 @@ def check_play_button(
         # Reinicia os dados estatisticos do jogo
         stats.reset_stats()
         stats.game_active = True
+
+        # Reinicia os dados estatísticos do jogo
+        sb.prep_score()
+        sb.prep_high_score()
+        sb.prep_level()
 
         # Esvazia a lista de alienígenas e de projéteis
         aliens.empty()
@@ -209,11 +217,17 @@ def check_bullet_alien_collisions(
         for aliens in collisions.values():  # type: ignore
             stats.score += ai_settings.alien_points * len(aliens)
             sb.prep_score()
+        check_high_score(stats, sb)
 
     if len(aliens) == 0:
         # Destroi os projéteis existentes e cria uma nova frota
         bullets.empty()
         ai_settings.increse_speed()
+
+        # Aumenta o nível
+        stats.level += 1
+        sb.prep_level()
+
         create_fleet(ai_settings, screen, ship, aliens)
 
 
@@ -354,3 +368,11 @@ def update_aliens(
 
     # verifica se há algum alienígena que atingiu a parte inferior da tela
     check_aliens_butom(ai_settings, stats, screen, ship, aliens, bullets)
+
+
+def check_high_score(stats: GameStats, sb: Scoreboard):
+    """Verifica se há uma nova pontuação máxima."""
+
+    if stats.score > stats.high_score:
+        stats.high_score = stats.high_score
+        sb.prep_high_score()
