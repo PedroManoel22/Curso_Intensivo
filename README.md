@@ -3,14 +3,17 @@
 ### Status: Desenvolvendo💻
 
 ## Descrição📃
+
 Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 
 #### Capítulo 1 - Iniciando
+
 - [x] 1.1 – python.org
 - [x] 1.2 – Erros de digitação em Hello World
 - [x] 1.3 – Habilidades infinitas
 
-#### Capítulo 2 -  Variáveis e Tipos De Dados Simples
+#### Capítulo 2 - Variáveis e Tipos De Dados Simples
+
 - [x] 2.1 - Mesagem Simples
 - [x] 2.2 - Mensagens Simples
 - [x] 2.3 - Mensagem Pessoal
@@ -23,20 +26,22 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 2.10 - Acrescentando Comentários
 - [x] 2.11 - Zen do Python
 
- #### Capítilo 3 - Introdução Ás Listas
- - [x] 3.1 - Nomes
- - [x] 3.2 - Saudações
- - [x] 3.3 - Sua Própria Lista
- - [x] 3.4 - Lista de Convidados
- - [x] 3.5 - Alterando a Lista de Convidados
- - [x] 3.6 - Mais Convidados
- - [x] 3.7 - Reduzindo a Lista de Convidados
- - [x] 3.8 - Conhecendo o Mundo
- - [x] 3.9 - Convidados Para Jantar
- - [x] 3.10 - Todas as Funções
- - [x] 3.11 - Erro Proposital
+#### Capítilo 3 - Introdução Ás Listas
+
+- [x] 3.1 - Nomes
+- [x] 3.2 - Saudações
+- [x] 3.3 - Sua Própria Lista
+- [x] 3.4 - Lista de Convidados
+- [x] 3.5 - Alterando a Lista de Convidados
+- [x] 3.6 - Mais Convidados
+- [x] 3.7 - Reduzindo a Lista de Convidados
+- [x] 3.8 - Conhecendo o Mundo
+- [x] 3.9 - Convidados Para Jantar
+- [x] 3.10 - Todas as Funções
+- [x] 3.11 - Erro Proposital
 
 #### Capítulo 4 - Trabalhando Com Lista
+
 - [x] 4.1 - Pizzas
 - [x] 4.2 - Animais
 - [x] 4.3 - Contando Até Vinte
@@ -54,6 +59,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 4.15 - Revisão de Código
 
 #### Capítulo 5 - Instruções if
+
 - [x] 5.1 - Testes Condicionais
 - [x] 5.2 - Mais Testes Condicionais
 - [x] 5.3 - Cores de Alienígenas 1
@@ -69,6 +75,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 5.13 - Suas Ideias
 
 #### Capítulo 6 - Dicionários
+
 - [x] 6.1 - Pessoa
 - [x] 6.2 - Números Favoritos
 - [x] 6.3 - Glossário
@@ -82,6 +89,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 6.11 - Cidades
 
 #### Capítulo 7 - Entrada de Usuário e Laços While
+
 - [x] 7.1 - Locação de Automóveis
 - [x] 7.2 - Lugares Em Um Restaurante
 - [x] 7.3 - Múltiplos de Dez
@@ -94,6 +102,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 7.10 - Férias Dos Sonhos
 
 #### Capítulo 8 - Funções
+
 - [x] 8.1 - Mensagem
 - [x] 8.2 - Livro Favorito
 - [x] 8.3 - Camiseta
@@ -112,6 +121,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 8.16 - Importações
 
 #### Capítulo 9 - Classes
+
 - [x] 9.1 - Restaurante
 - [x] 9.2 - Três Restaurantes
 - [x] 9.3 - Usuários
@@ -129,6 +139,7 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 9.15 - Módulo Python da Semana
 
 #### Capítulo 10 - Arquivos e Exceções
+
 - [x] 10.1 - Aprendendo Python
 - [x] 10.2 - Aprendendo C
 - [x] 10.3 - Convidado
@@ -144,31 +155,31 @@ Resoluções das questões do livro Curso Intensivo de Python de Eric Matthes.
 - [x] 10.13 - Verificando Se é o Usuário Correto
 
 #### Capítulo 11 - Testando o Seu Código
+
 - [x] 11.1 - Cidade, país
 - [x] 11.2 - População
 - [x] 11.3 - Funcionário
 
 ---
+
 ## 🚀 Projetos em Desenvolvimento (Portfolio Building)
 
 Esta seção compreende os projetos práticos do livro, desenvolvidos com o objetivo de consolidar conceitos de arquitetura de software, manipulação de dados e desenvolvimento web seguindo as melhores práticas Pythonicas (`PEP 8`).
 
 ### 👾 1. Invasão Alien (Desenvolvimento de Jogos com Pygame)
-* **Status:** `Em Desenvolvimento` 🚧
-* **Progresso:** █████████░ (92%)
-* **Foco Técnico:** Programação Orientada a Objetos (POO), gerenciamento de eventos, refatoração de classes e controle de loops de jogos com `pygame`.
+
+- **Status:** `Em Desenvolvimento` ✅
+- **Progresso:** ██████████ (100%)
+- **Foco Técnico:** Programação Orientada a Objetos (POO), gerenciamento de eventos, refatoração de classes e controle de loops de jogos com `pygame`.
 
 ### 📊 2. Visualização de Dados (Data Science & Analytics)
-* **Status:** `Planejado / Próximos Passos` 📅
-* **Progresso:** ░░░░░░░░░░ (0%)
-* **Foco Técnico:** Manipulação de dados com `matplotlib` e `requests`, consumo de APIs públicas (GitHub/Hacker News) e geração de gráficos interativos.
+
+- **Status:** `Em Desenvolvimento` 🚧
+- **Progresso:** ░░░░░░░░░░ (1%)
+- **Foco Técnico:** Manipulação de dados com `matplotlib` e `requests`, consumo de APIs públicas (GitHub/Hacker News) e geração de gráficos interativos.
 
 ### 🌐 3. Aplicação Web (Desenvolvimento Web com Django)
-* **Status:** `Planejado / Próximos Passos` 📅
-* **Progresso:** ░░░░░░░░░░ (0%)
-* **Foco Técnico:** Padrão MVT (Model-View-Template), persistência em bancos de dados, sistemas de autenticação de usuários e deploy em produção.
 
-
-
-       
-
+- **Status:** `Planejado / Próximos Passos` 📅
+- **Progresso:** ░░░░░░░░░░ (0%)
+- **Foco Técnico:** Padrão MVT (Model-View-Template), persistência em bancos de dados, sistemas de autenticação de usuários e deploy em produção.
