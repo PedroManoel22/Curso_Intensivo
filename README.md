@@ -168,7 +168,7 @@ Esta seção compreende os projetos práticos do livro, desenvolvidos com o obje
 
 ### 👾 1. Invasão Alien (Desenvolvimento de Jogos com Pygame)
 
-- **Status:** `Em Desenvolvimento` ✅
+- **Status:** `Finalizado` ✅
 - **Progresso:** ██████████ (100%)
 - **Foco Técnico:** Programação Orientada a Objetos (POO), gerenciamento de eventos, refatoração de classes e controle de loops de jogos com `pygame`.
 
