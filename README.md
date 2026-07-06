@@ -175,7 +175,7 @@ Esta seção compreende os projetos práticos do livro, desenvolvidos com o obje
 ### 📊 2. Visualização de Dados (Data Science & Analytics)
 
 - **Status:** `Em Desenvolvimento` 🚧
-- **Progresso:** ░░░░░░░░░░ (1%)
+- **Progresso:** █░░░░░░░░░ (19%)
 - **Foco Técnico:** Manipulação de dados com `matplotlib` e `requests`, consumo de APIs públicas (GitHub/Hacker News) e geração de gráficos interativos.
 
 ### 🌐 3. Aplicação Web (Desenvolvimento Web com Django)
