@@ -379,5 +379,5 @@ def check_high_score(stats: GameStats, sb: Scoreboard):
     """Verifica se há uma nova pontuação máxima."""
 
     if stats.score > stats.high_score:
-        stats.high_score = stats.high_score
+        stats.high_score = stats.score
         sb.prep_high_score()
