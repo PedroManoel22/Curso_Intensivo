@@ -20,7 +20,7 @@ while True:
         c=point_numbers,
         cmap=plt.cm.Blues,
         edgecolor="none",
-        s=1,
+        s=15,
     )
 
     # Enfatiza o primeiro e o último ponto
