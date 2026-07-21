@@ -20,7 +20,6 @@ class RandomWalk:
         while len(self.x_values) < self.num_points:
             # Decide direção a ser seguida e distância a ser percorrida nessa direção
             x_step = self.get_step()
-
             y_step = self.get_step()
 
             # Rejeita movimentos que não vão a lugar nenhum
