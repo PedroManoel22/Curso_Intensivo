@@ -6,7 +6,7 @@ from random_walk import RandomWalk
 # Continua criando novos passeios enquanto o programa estiver ativo
 while True:
     # Cria um passeio aleatório e plota os pontos
-    rw = RandomWalk(50000)
+    rw = RandomWalk()
     rw.fill_walk()
 
     # Define o tamanho da janela de plotagem
