@@ -5,19 +5,14 @@ from die import Die
 die1 = Die()
 
 # Faz alguns lançamentos e armazena os resultados numa lista
-results: list[int] = []
+results: list[int] = [die1.roll() for _ in range(1000)]
 
-for roll_num in range(1000):
-    result = die1.roll()
-    results.append(result)
 
 # Analisa os resultados
-frequences: list[int] = []
 max_result = die1.num_sides
 
-for value in range(1, max_result + 1):
-    frequency = results.count(value)
-    frequences.append(frequency)
+frequences: list[int] = [results.count(value) for value in range(1, max_result + 1)]
+
 
 # Visualiza os resultados
 hist = pygal.Bar()
