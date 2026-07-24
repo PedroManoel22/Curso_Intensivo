@@ -1,6 +1,6 @@
 from pathlib import Path
 
-import pygal
+import matplotlib.pyplot as plt
 from die import Die
 
 diretorio_atual = Path(__file__).parent
@@ -25,11 +25,14 @@ for value in range(2, max_result + 1):
     frequencies.append(frequency)
 
 # Visualiza os resultados
-hist = pygal.Bar()
-hist.title = "Results of rolling two D6 dice 1000 times."
-hist.x_labels = [str(value) for value in range(2, max_result + 1)]
+# Defini o tamanho da janela de pltagem
+plt.figure(dpi=128, figsize=(10, 6))
 
-hist.x_title = "Result"
-hist.y_title = "Frequency of Result"
-hist.add("D6 * D6", frequencies)
-hist.render_to_file(nome_arquivo)
+x_values = list(range(2, max_result + 1))
+plt.bar(x_values, frequencies, width=0.8)
+plt.xlabel("Result")
+plt.ylabel("Frequencies of Results")
+plt.title("Results of rolling two D6 dice 1000 times")
+
+# Salvar o gráfico
+plt.savefig(nome_arquivo, bbox_inches="tight")
