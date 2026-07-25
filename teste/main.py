@@ -16,7 +16,7 @@ with open(filename_san_francisco) as f:
     reader = csv.reader(f)
     header_row = next(reader)
 
-    # Pegando as temperaturas máxiams de cada dia
+    # Pegando as temperaturas máximas de cada dia
     dates: list[datetime] = []
     highs: list[float] = []
     lows: list[float] = []
@@ -76,9 +76,9 @@ ax.plot(dates_death, highs_death, c="yellow", alpha=0.5)  # type: ignore[reportU
 ax.plot(dates_death, lows_death, c="black", alpha=0.5)  # type: ignore[reportUnknownMemberType]
 ax.fill_between(dates_death, highs_death, lows_death, facecolor="blue", alpha=0.1)  # type: ignore[reportUnknownMemberType]
 
-ax.set_title(
+ax.set_title(  # type: ignore[reportUnknownMemberType]
     "Daily high and low temperatures - 2014\nSan Fracisco / Death Valley", fontsize=20
-)  # type: ignore[reportUnknownMemberType]
+)
 ax.set_xlabel("", fontsize=1)  # type: ignore[reportUnknownMemberType]
 ax.set_ylabel("Temperatura (F)", fontsize=16)  # type: ignore[reportUnknownMemberType]
 ax.tick_params(axis="both", which="major", labelsize=16)  # type: ignore[reportUnknownMemberType]
