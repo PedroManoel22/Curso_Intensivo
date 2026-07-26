@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 
-from pega_dados_armnazena import escrever_dados
+from pega_dados_armazena import escrever_dados
 
 ROOT_DIR = Path(__file__).parent
 filename = "INMET_CO_DF_A001_BRASILIA_01-01-2026_A_30-06-2026.CSV"
