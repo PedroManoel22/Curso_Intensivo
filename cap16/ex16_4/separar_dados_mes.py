@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 
-from pega_dados_armazena import escrever_dados
+from Curso_Intensivo.cap16.ex16_4.functions import escrever_dados
 
 ROOT_DIR = Path(__file__).parent
 filename = "INMET_CO_DF_A001_BRASILIA_01-01-2026_A_30-06-2026.CSV"
@@ -40,6 +40,3 @@ with open(file_dir, encoding="latin-1") as f:
     # Salva os dados do último mês (mês 6) acumulados na lista
     if dados:
         escrever_dados(mes_atual, dados)
-
-
-print(len(dados))
