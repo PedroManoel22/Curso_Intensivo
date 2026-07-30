@@ -7,7 +7,5 @@ def get_country_code(country_name: str):
     for code, name in COUNTRIES.items():
         if name == country_name:
             return code
-        else:
-            ...
 
     return None
