@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Any
 
 import pygal
 import requests
@@ -21,17 +22,39 @@ print("Total repositories:", response_dict["total_count"])
 # Explora informações sobre os repositórios
 repo_dicts = response_dict["items"]
 
-names, stars = [], []
+names: list[str] = []
+plot_dicts: list[dict[str, Any]] = []
 
 for repo_dict in repo_dicts:
     names.append(repo_dict["name"])
-    stars.append(repo_dict["stargazers_count"])
+
+    plot_dict: dict[str, Any] = {
+        "value": repo_dict["stargazers_count"],
+        "label": str(repo_dict["description"]),
+        "xlink": repo_dict["html_url"],
+    }
+
+    plot_dicts.append(plot_dict)
 
 # Cria a visualização
 my_style = LS("#333366", base_style=LCS)
-chart = pygal.Bar(style=my_style, x_label_rotation=45, show_legend=False)
+
+my_config = pygal.Config(
+    x_label_rotation=45,
+    show_legend=False,
+    title_font_size=24,
+    label_font_size=14,
+    major_label_font_size=18,
+    truncate_label=15,
+    show_y_guides=False,
+    width=1000,
+)
+
+
+chart = pygal.Bar(my_config, style=my_style)
+
 chart.title = "Most-Starred Python Projects on GitHub"
 chart.x_labels = names
 
-chart.add("", stars)
-chart.render_to_file(FILE_DIR)
+chart.add("", plot_dicts)  # type: ignore
+chart.render_to_file(FILE_DIR)  # type: ignore
