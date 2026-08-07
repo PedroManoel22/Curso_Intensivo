@@ -7,11 +7,11 @@ from pygal.style import LightColorizedStyle as LCS
 from pygal.style import LightenStyle as LS
 
 ROOT_DIR = Path(__file__).parent
-FILE_NAME = "python_repos.svg"
+FILE_NAME = "python_repos_17_1.svg"
 FILE_DIR = ROOT_DIR / FILE_NAME
 
 # Faz uma chamada de API e armazena a resposta
-url = "https://api.github.com/search/repositories?q=language:python&sort=stars"
+url = "https://api.github.com/search/repositories?q=language:javascript&sort=stars"  # mundando a linguagem para javascript
 r = requests.get(url)
 print(f"Status code: {r.status_code}")
 
