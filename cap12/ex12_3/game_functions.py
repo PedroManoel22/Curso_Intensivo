@@ -6,6 +6,7 @@ from ship import Ship
 
 # Tipagem
 
+
 def check_keydown_events(event: pygame.event.Event, ship: Ship):
     """Responde a pressionamento de tecla."""
 
@@ -21,6 +22,7 @@ def check_keydown_events(event: pygame.event.Event, ship: Ship):
     elif event.key == pygame.K_DOWN:
         ship.moving_down = True
 
+
 def check_keyup_events(event: pygame.event.Event, ship: Ship):
     """Responde a solturas de tecla."""
 
@@ -29,7 +31,7 @@ def check_keyup_events(event: pygame.event.Event, ship: Ship):
 
     elif event.key == pygame.K_LEFT:
         ship.moving_left = False
-    
+
     if event.key == pygame.K_UP:
         ship.moving_up = False
 
@@ -49,10 +51,9 @@ def check_events(ship: Ship) -> None:
 
         elif event.type == pygame.KEYDOWN:
             check_keydown_events(event, ship)
-            
+
         elif event.type == pygame.KEYUP:
-               check_keyup_events(event, ship)
-            
+            check_keyup_events(event, ship)
 
 
 def update_screen(ai_settings: Settings, screen: pygame.Surface, ship: Ship) -> None:

@@ -94,4 +94,3 @@
 
 # print(pessoas)
 # print(f'Estou chamando {len(pessoas)} para o jantar!')
-

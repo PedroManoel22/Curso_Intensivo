@@ -154,7 +154,9 @@ def update_bullets(
                     end_game(stats)
 
     # Colisão projétil × alvo (remove projétil e 'reseta' o alvo de leve)
-    for bullet in pygame.sprite.spritecollide(target_as_sprite(target), bullets, True):  # type:ignore
+    for bullet in pygame.sprite.spritecollide(
+        target_as_sprite(target), bullets, True
+    ):  # type:ignore
         # Para simplificar, apenas inverte a direção ao ser atingido
         target.direction *= -1
 
